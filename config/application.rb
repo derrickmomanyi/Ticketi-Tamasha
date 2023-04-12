@@ -1,3 +1,4 @@
+
 require_relative "boot"
 
 require "rails/all"
@@ -29,3 +30,4 @@ module Ticketitamasha
     config.action_dispatch.cookies_same_site_protection = :strict
   end
 end
+
