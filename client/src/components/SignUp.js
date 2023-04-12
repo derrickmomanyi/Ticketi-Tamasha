@@ -12,15 +12,15 @@ function SignUp(){
         <input className="form-control" type="email" placeholder="Enter Your Email" name="uname" required/><br/>
         <input className="form-control" type="password" placeholder="Enter Password" name="psw" required/><br/>
         <input className="form-control" type="password" placeholder="Confirm Password" name="psw" required/><br/>
-        <button className="btn login btn-primary" type="submit">Create Account</button>
+        <button className="btn sign btn-primary" type="submit">Create Account</button>
         </div>  
         <div className="card-signup2">
         <h4>Organiser Sign Up</h4>
         <input className="form-control" type="text" placeholder="Enter Username" name="uname" required/><br/>
         <input className="form-control" type="email" placeholder="Enter Your Email" name="uname" required/><br/>
         <input className="form-control" type="password" placeholder="Enter Password" name="psw" required/><br/>
-        <input className="form-control" type="password" placeholder="Enter Password" name="psw" required/><br/>
-        <button className="btn login btn-primary" type="submit">Create Account</button>
+        <input className="form-control" type="password" placeholder="Confirm Password" name="psw" required/><br/>
+        <button className="btn sign btn-primary" type="submit">Create Account</button>
         </div> 
         </div>     
          </>
