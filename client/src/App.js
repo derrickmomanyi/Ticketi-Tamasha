@@ -1,28 +1,23 @@
 import React from 'react'
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import './App.css';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Events from './components/Events';
-import Organise from './components/Organise';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
 import CustomerEvents from './components/CustomerEvents';
 import OrganizerEvents from './components/OrganizerEvents';
 import AddEvent from './components/AddEvent';
+import Layout from './components/Layout';
+import Home from './components/Home';
 
 function App() {
 
   return (
     <BrowserRouter>
-    <div className="App">
+    <div className="App">      
 
-      <Navbar />
-
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="events" element={<Events/>} />
-      <Route path="organise" element={<Organise/>} />
+    <Routes> 
+      <Route path = '/' element = { <Layout />}/> 
+      <Route index element = { <Home />}/>      
       <Route path="login" element={<Login />} />
       <Route path="signup" element={<SignUp />} />
       <Route path= "customerevents" element={<CustomerEvents />}/>

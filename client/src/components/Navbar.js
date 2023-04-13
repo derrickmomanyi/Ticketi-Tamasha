@@ -35,14 +35,8 @@ function Navbar() {
                             className="navbar-nav me-auto mb-2 mb-lg-0"
                             style={{ paddingLeft: "50%" }}
                         >
-                            <li className="nav-item">
-                                <NavLink to="/">Home</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to="/events">Events</NavLink>
-                            </li>
-
-
+                           
+                           
                             {user && !user?.admin ? <li className="nav-item">
                                 <NavLink to="/customerevents">Customer Events</NavLink>
                             </li> : null }
@@ -50,6 +44,10 @@ function Navbar() {
                            
                             {user?.admin ? <li className="nav-item">
                                 <NavLink to="/organizerevents">Organiser Events</NavLink>
+                            </li> : ''  }
+
+                            {user?.admin ? <li className="nav-item">
+                                <NavLink to="/addevent">Add Events</NavLink>
                             </li> : ''  }
 
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
