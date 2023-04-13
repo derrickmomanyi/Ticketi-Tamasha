@@ -29,9 +29,9 @@ function Navbar() {
                             <li className="nav-item">
                                 <NavLink to="/organise">Organise</NavLink>
                             </li>
-                            <div class="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
-                                <button onClick={handleClickLogin} class="btn btn-primary me-md-2" type="button">Login</button>
-                                <button onClick={handleClickSign} class="btn btn-primary" type="button">SignUp</button>
+                            <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
+                                <button onClick={handleClickLogin} className="btn btn-primary me-md-2" type="button">Login</button>
+                                <button onClick={handleClickSign} className="btn btn-primary" type="button">SignUp</button>
                             </div>
                         </ul>
                     </div>
