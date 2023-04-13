@@ -154,7 +154,9 @@ function SignUp({ setUser }){
 
             <p style={{color: 'red'}}>{errors}</p>
 
+
             <button className="btn sign btn-primary" type="submit">Create Account</button>
+
             </form>
         </div>  
        
@@ -205,7 +207,9 @@ function SignUp({ setUser }){
             <p style={{color: 'red'}}>{errorsOrg}</p>
 
         
+
         <button className="btn sign btn-primary" type="submit">Create Account</button>
+
         </form>
         </div> 
         
