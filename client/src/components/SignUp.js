@@ -1,9 +1,12 @@
 import React, {useState} from "react"
 import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 import '../css/SignUp.css';
 
 
-function SignUp({ setUser }){
+function SignUp(){
+    const { setUser } = useContext(UserContext)
     //customer signup state variables
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
