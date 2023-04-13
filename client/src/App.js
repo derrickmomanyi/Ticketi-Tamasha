@@ -16,7 +16,9 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
+
       <Navbar />
+
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="events" element={<Events/>} />
@@ -27,6 +29,7 @@ function App() {
       <Route path= "organizerevents" element={<OrganizerEvents />} />
       <Route path = "addevent" element = {<AddEvent />}/>
     </Routes>
+
 
     </div>
     </BrowserRouter>
