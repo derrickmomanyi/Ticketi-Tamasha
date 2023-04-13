@@ -8,6 +8,7 @@ function Home(){
     console.log(user?.admin);
     return(
         <>
+      {user && !user?.admin ? <h1>Home customer</h1> : ''}
        { user?.admin ? <h1>Home organizer </h1> : ''}
         </>
     )

@@ -7,9 +7,9 @@ import { UserContext } from "../context/user";
 
 function Navbar() {
     const navigate = useNavigate();
-    const { user, setUser } = useContext(UserContext)
-    // const handleClickLogin = ()=> navigate("/login")
-    // const handleClickSign = ()=> navigate("/sign")
+    const { user, setUser } = useContext(UserContext) 
+
+    console.log(user?.admin);
 
 
     function handleClickLogout(){
@@ -41,13 +41,15 @@ function Navbar() {
                             <li className="nav-item">
                                 <NavLink to="/events">Events</NavLink>
                             </li>
-                             {/* <li className="nav-item">
+
+
+                            {user && !user?.admin ? <li className="nav-item">
                                 <NavLink to="/customerevents">Customer Events</NavLink>
-                            </li>  */}
+                            </li> : null }
 
                            
                             {user?.admin ? <li className="nav-item">
-                                <NavLink to="/organiserevents">Organiser Events</NavLink>
+                                <NavLink to="/organizerevents">Organiser Events</NavLink>
                             </li> : ''  }
 
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
