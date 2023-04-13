@@ -6,6 +6,7 @@
     padding: 30px 16px;
     margin: 7% 10%;
 
+
   }
   
   .card-signup:hover {
@@ -15,13 +16,11 @@
     display: flex;
  }
  .card-signup2{
-
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 30%;
     padding: 30px 16px;
     margin: 7% 10%;
-
   }
   
   .card-signup2:hover {
@@ -38,3 +37,5 @@
     .card-signup2 h4{
         color: #008080;
     }
+  }
+
