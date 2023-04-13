@@ -37,7 +37,7 @@ function App() {
       <Route path="events" element={<Events/>} />
       <Route path="organise" element={<Organise/>} />
       <Route path="login" element={<Login setUser={ setUser }/>} />
-      <Route path="sign" element={<SignUp setUser={ setUser }/>} />
+      <Route path="signup" element={<SignUp setUser={ setUser }/>} />
     </Routes>
     </div>
   );

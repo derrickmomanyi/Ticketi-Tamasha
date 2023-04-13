@@ -4,11 +4,25 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-function Navbar() {
+function Navbar({user, setUser}) {
     const navigate = useNavigate();
 
-    const handleClickLogin = ()=> navigate("/login")
-    const handleClickSign = ()=> navigate("/sign")
+    // const handleClickLogin = ()=> navigate("/login")
+    // const handleClickSign = ()=> navigate("/sign")
+
+
+    function handleClickLogout(){
+        fetch('/logout', {
+            method: 'DELETE'
+          })
+          .then((res) => {
+            if (res.ok) {
+              setUser(false);
+              navigate(`/`); 
+              
+            }
+          });
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,8 +44,18 @@ function Navbar() {
                                 <NavLink to="/organise">Organise</NavLink>
                             </li>
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
-                                <button onClick={handleClickLogin} className="btn btn-primary me-md-2" type="button">Login</button>
-                                <button onClick={handleClickSign} className="btn btn-primary" type="button">SignUp</button>
+
+                               {user ?  <NavLink to='/logout' onClick={ handleClickLogout }><button className="btn btn-primary me-md-2" type="button">Logout</button></NavLink>
+                                :  <NavLink to='/login'  ><button className="btn btn-primary me-md-2" type="button">Login</button></NavLink>
+                                }
+
+                                { user ? null :
+                                    <NavLink to='/signup'>
+                                         <button  className="btn btn-primary" type="button">SignUp</button>
+                                    </NavLink>
+                                }
+
+                               
                             </div>
                         </ul>
                     </div>
