@@ -31,7 +31,6 @@ function App() {
    }, [])
   return (
     <div className="App">
-
       <Navbar user={ user } setUser={ setUser }/>
     <Routes>
       <Route path="/" element={<Home/>} />
@@ -46,4 +45,3 @@ function App() {
 }
 
 export default App;
-
