@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import { useNavigate } from 'react-router-dom';
 import { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { UserContext } from "../context/user";
 import '../css/SignUp.css';
 
@@ -161,6 +162,8 @@ function SignUp(){
             <button className="btn sign btn-primary" type="submit">Create Account</button>
 
             </form>
+            <p><span>Already have an account?</span></p>
+        <NavLink to='/login'> <p><span>Log In</span></p> </NavLink>   
         </div>  
        
 
@@ -214,6 +217,8 @@ function SignUp(){
         <button className="btn sign btn-primary" type="submit">Create Account</button>
 
         </form>
+        <p><span>Already have an account?</span></p>
+        <NavLink to='/login'> <p><span>Log In</span></p> </NavLink>   
         </div> 
         
         </div>     

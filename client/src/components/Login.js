@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/user";
 import '../css/Login.css';
@@ -68,7 +69,10 @@ function Login(){
          <p style={{color: 'red'}}>{errors}</p>
 
         <button className="btn login btn-primary" type="submit">Login</button>
+        <p><span>Don't have an account?</span></p>
+        <NavLink to='/signup'> <p><span>Sign Up</span></p> </NavLink>  
         </div>
+       
         </form>
         </>
     )
