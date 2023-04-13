@@ -69,8 +69,10 @@ function Login(){
          <p style={{color: 'red'}}>{errors}</p>
 
         <button className="btn login btn-primary" type="submit">Login</button>
+        <div className="redirect">
         <p><span>Don't have an account?</span></p>
-        <NavLink to='/signup'> <p><span>Sign Up</span></p> </NavLink>  
+        <NavLink to='/signup'> <p><span>Sign Up</span></p> </NavLink> 
+        </div>
         </div>
        
         </form>
