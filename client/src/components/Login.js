@@ -32,7 +32,7 @@ function Login(){
         .then((res) => {
             if(res.ok) {
                 res.json().then((user) => setUser(user)); 
-                navigate(`/events`); 
+                navigate(`/`); 
             }
             else {
                 res.json().then((err) => setErrors("Invalid Username or Password!!"));
