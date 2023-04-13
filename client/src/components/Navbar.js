@@ -1,12 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 
 
-
-function Navbar({user, setUser}) {
+function Navbar() {
     const navigate = useNavigate();
-
+    const { user, setUser } = useContext(UserContext)
     // const handleClickLogin = ()=> navigate("/login")
     // const handleClickSign = ()=> navigate("/sign")
 
@@ -40,9 +41,15 @@ function Navbar({user, setUser}) {
                             <li className="nav-item">
                                 <NavLink to="/events">Events</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink to="/organise">Organise</NavLink>
-                            </li>
+                             {/* <li className="nav-item">
+                                <NavLink to="/customerevents">Customer Events</NavLink>
+                            </li>  */}
+
+                           
+                            {user?.admin ? <li className="nav-item">
+                                <NavLink to="/organiserevents">Organiser Events</NavLink>
+                            </li> : ''  }
+
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
 
                                {user ?  <NavLink to='/logout' onClick={ handleClickLogout }><button className="btn btn-primary me-md-2" type="button">Logout</button></NavLink>
