@@ -1,8 +1,7 @@
 class EventsController < ApplicationController
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
-    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
-    skip_before_action :authorized_user
-    skip_before_action :admin_user, only: [:index, :show] #allows non admins to access index and show
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response   
+    skip_before_action :authorized_user, :admin_user, only: [:index, :show] #allows non admins to access index and show
 
     wrap_parameters format: []
 
