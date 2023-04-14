@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 import '../css/Login.css';
 
 
-function Login( {setUser} ){
-
+function Login(){
+    const { setUser } = useContext(UserContext)
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState(null)
@@ -29,7 +32,7 @@ function Login( {setUser} ){
         .then((res) => {
             if(res.ok) {
                 res.json().then((user) => setUser(user)); 
-                navigate(`/events`); 
+                navigate(`/`); 
             }
             else {
                 res.json().then((err) => setErrors("Invalid Username or Password!!"));
@@ -66,7 +69,12 @@ function Login( {setUser} ){
          <p style={{color: 'red'}}>{errors}</p>
 
         <button className="btn login btn-primary" type="submit">Login</button>
+        <div className="redirect">
+        <p><span>Don't have an account?</span></p>
+        <NavLink to='/signup'> <p><span>Sign Up</span></p> </NavLink> 
         </div>
+        </div>
+       
         </form>
         </>
     )
