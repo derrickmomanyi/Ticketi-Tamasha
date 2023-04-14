@@ -8,6 +8,7 @@ import OrganizerEvents from './components/OrganizerEvents';
 import AddEvent from './components/AddEvent';
 import Layout from './components/Layout';
 import Home from './components/Home';
+import EachEvent from './components/EachEvent';
 
 function App() {
 
@@ -37,6 +38,7 @@ function App() {
             <Route path="customerevents" element={<CustomerEvents />} />
             <Route path="organizerevents" element={<OrganizerEvents />} />
             <Route path="addevent" element={<AddEvent />} />
+            <Route path="/events/:id" element = {<EachEvent />} />
           </Route>
 
           <Route path="login" element={<Login />} />
