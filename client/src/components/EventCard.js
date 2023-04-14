@@ -6,7 +6,7 @@ function EventCard({ event }) {
     console.log(event)
     return (
         <>
-            <div className="card " style={{ width: '18rem'}}>
+            <div className="card" style={{ width: '18rem'}}>
                 <img src={event.image} className="card-img-top"alt={event.image} />
                 <div className="card-body">
                     <div>
