@@ -20,11 +20,11 @@ Event.create([{
              date: Date.new(2023, 6, 15),
              time: Time.new(2023, 6, 15, 19, 0, 0),
              tickets: 100,
-             price: 10,
+             price: 10
            
-}
+},
 {
-    (title: "Betrayal in the city",
+    title: "Betrayal in the city",
         image: "https://tikiti.co.ke/images/63ce9626c8a69.jpg",
         category: "Theatre plays",
         description: "Come see the latest works of local actors.",
@@ -35,11 +35,10 @@ Event.create([{
         date: Date.new(2023, 7, 1),
         time: Time.new(2023, 7, 1, 18, 0, 0),
         tickets: 200,
-        price: 20,)
-}
-
+        price: 20
+},
 {
-  (title: "Friday Fight Night",
+  title: "Friday Fight Night",
              image: "https://tikiti.co.ke/images/633fe1ded4edb.jpg",
              category: "Sports",
              description: "See your favourite fighters clash head to head.",
@@ -50,11 +49,11 @@ Event.create([{
              date: Date.new(2023, 8, 15),
              time: Time.new(2023, 8, 15, 12, 0, 0),
              tickets: 300,
-             price: 20,)
+             price: 20
              
-}
+},
 {
-   ( title: "Cultural Festival",
+   title: "Cultural Festival",
              image: "https://tikiti.co.ke/images/6261d30b0af05.jpg",
              category: "Culture",
              description: "Sample different clothes,dishes,art,music from around the worls.",
@@ -65,11 +64,11 @@ Event.create([{
              date: Date.new(2023, 8, 15),
              time: Time.new(2023, 8, 15, 12, 0, 0),
              tickets: 400,
-             price: 20,)
+             price: 20
           
-}
+},
 {
-    (title: "concours D'elegance",
+   title: "concours D'elegance",
              image: "https://tikiti.co.ke/images/62ebba36dd39c.jpg",
              category: "Motor Show",
              description: "See your favorite classic cars on display.",
@@ -80,9 +79,8 @@ Event.create([{
              date: Date.new(2023, 8, 15),
              time: Time.new(2023, 8, 15, 12, 0, 0),
              tickets: 200,
-             price: 20,)
+             price: 20
            
 }
 ])
-
 puts ":white_check_mark: Done seeding!"
