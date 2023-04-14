@@ -1,0 +1,18 @@
+current directory: /home/mwendadennis/Assignments/Development/Code/Phase5/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Phase5/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230414-8308-12ns6po sitelibdir\=./.gem.20230414-8308-12ns6po clean
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Phase5/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230414-8308-12ns6po sitelibdir\=./.gem.20230414-8308-12ns6po
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Phase5/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230414-8308-12ns6po sitelibdir\=./.gem.20230414-8308-12ns6po install
+/bin/install -m 0755 websocket_mask.so ./.gem.20230414-8308-12ns6po
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Phase5/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make DESTDIR\= sitearchdir\=./.gem.20230414-8308-12ns6po sitelibdir\=./.gem.20230414-8308-12ns6po clean
