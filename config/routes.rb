@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :organizers
+  resources :customers
+  resources :customer_events
+  resources :events
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#delete'
+  get '/me', to: 'organizers#show'
 end
