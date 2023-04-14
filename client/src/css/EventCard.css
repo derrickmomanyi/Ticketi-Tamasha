@@ -21,3 +21,29 @@
   background-color: rgba(170, 164, 164, 0.575);
   cursor: pointer;
 }
+
+.card-title{
+ 
+
+  font-size: 18px;
+  color: #010b26;
+}
+
+.date-box{
+    margin-top: 2px;    
+    font-weight: 600;
+   
+}
+
+.date-box span{
+  color: #ff8000;
+}
+
+
+label {
+  display:block;
+  color: rgba(0, 0, 0, 0.9);
+  margin-top: 14px;
+  /* margin-bottom: .5em; */
+  font-size: 13px;
+}
