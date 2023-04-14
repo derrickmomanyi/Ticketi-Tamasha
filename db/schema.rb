@@ -11,10 +11,14 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2023_04_14_120357) do
 =======
 ActiveRecord::Schema[7.0].define(version: 2023_04_14_080619) do
 >>>>>>> a65a973 (Added edits to Navbar)
+=======
+ActiveRecord::Schema[7.0].define(version: 2023_04_14_120357) do
+>>>>>>> 8371ac5 (Deleted Vendor)
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
