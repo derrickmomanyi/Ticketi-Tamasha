@@ -29,7 +29,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid" style={{ height: "7vh" }}>
                     <a className="navbar-brand" href="/" style={{ color: "#008080" }}>
-                        <strong>LOGO</strong>
+                        <strong>TIKETI TAMASHA</strong>
                     </a>
                         <ul
                             className="navbar-nav me-auto mb-2 mb-lg-0"

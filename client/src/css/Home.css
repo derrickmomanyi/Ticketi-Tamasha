@@ -1,0 +1,37 @@
+.events-container{
+    margin-left: 2%;
+}
+.home {
+    background-image: url("https://static1.squarespace.com/static/588f75c9d1758ed4bee19d6d/t/62aa3db189d0b3375b6277c7/1664237977770/DuvalFolx-42.jpg?format=1500w");
+    height: 60vh;
+    background-size: cover;
+}
+
+.transbox {
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(15, 15, 15));
+    height: 60vh;
+}
+
+.text-home h1 {
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.text-home p {
+    color: #ffffff;
+
+}
+
+.text-home {
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 2%;
+}
+.card-heading{
+text-align: center;   
+color: #800000; 
+}
+.searchbar{
+    width: 30vw;
+}
