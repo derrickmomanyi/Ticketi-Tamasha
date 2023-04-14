@@ -1,0 +1,2 @@
+class CustomerEventsController < ApplicationController
+end

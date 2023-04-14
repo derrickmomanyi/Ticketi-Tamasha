@@ -1,14 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 
 
-
-function Navbar({user, setUser}) {
+function Navbar() {
     const navigate = useNavigate();
+    const { user, setUser } = useContext(UserContext) 
 
-    // const handleClickLogin = ()=> navigate("/login")
-    // const handleClickSign = ()=> navigate("/sign")
+    console.log(user?.admin);
 
 
     function handleClickLogout(){
@@ -34,15 +35,21 @@ function Navbar({user, setUser}) {
                             className="navbar-nav me-auto mb-2 mb-lg-0"
                             style={{ paddingLeft: "50%" }}
                         >
-                            <li className="nav-item">
-                                <NavLink to="/">Home</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to="/events">Events</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink to="/organise">Organise</NavLink>
-                            </li>
+                           
+                           
+                            {user && !user?.admin ? <li className="nav-item">
+                                <NavLink to="/customerevents">Customer Events</NavLink>
+                            </li> : null }
+
+                           
+                            {user?.admin ? <li className="nav-item">
+                                <NavLink to="/organizerevents">Organiser Events</NavLink>
+                            </li> : ''  }
+
+                            {user?.admin ? <li className="nav-item">
+                                <NavLink to="/addevent">Add Events</NavLink>
+                            </li> : ''  }
+
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{paddingLeft:"60%"}}>
 
                                {user ?  <NavLink to='/logout' onClick={ handleClickLogout }><button className="btn btn-primary me-md-2" type="button">Logout</button></NavLink>
