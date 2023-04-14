@@ -1,0 +1,19 @@
+current directory: /home/mwendadennis/Assignments/Development/Code/Tikiti-Tamasha/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/debug-1.7.2/ext/debug
+/usr/share/rvm/rubies/ruby-2.7.4/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Tikiti-Tamasha/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230414-3957-1q65fmk sitelibdir\=./.gem.20230414-3957-1q65fmk clean
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Tikiti-Tamasha/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230414-3957-1q65fmk sitelibdir\=./.gem.20230414-3957-1q65fmk
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.so
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Tikiti-Tamasha/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230414-3957-1q65fmk sitelibdir\=./.gem.20230414-3957-1q65fmk install
+/bin/install -m 0755 debug.so ./.gem.20230414-3957-1q65fmk/debug
+
+current directory: /home/mwendadennis/Assignments/Development/Code/Tikiti-Tamasha/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/debug-1.7.2/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230414-3957-1q65fmk sitelibdir\=./.gem.20230414-3957-1q65fmk clean
