@@ -1,4 +1,3 @@
-
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -76,5 +75,4 @@ end
 
 
 gem 'rack-cors'
-
 gem "active_model_serializers", "~> 0.10.13"
