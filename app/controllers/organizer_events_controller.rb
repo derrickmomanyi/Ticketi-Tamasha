@@ -1,0 +1,2 @@
+class OrganizerEventsController < ApplicationController
+end
