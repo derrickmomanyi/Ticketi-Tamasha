@@ -35,7 +35,9 @@ function Navbar() {
                             className="navbar-nav me-auto mb-2 mb-lg-0"
                             style={{ paddingLeft: "50%" }}
                         >
-                           
+                           <li className="nav-item">
+                                <NavLink to="/">Home</NavLink>
+                            </li> 
                            
                             {user && !user?.admin ? <li className="nav-item">
                                 <NavLink to="/customerevents">Customer Events</NavLink>
