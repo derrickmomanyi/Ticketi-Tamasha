@@ -64,7 +64,7 @@ function Navbar() {
 
                             <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{marginLeft:"750px", marginTop:"3px"}}>
 
-                               {user ?  <NavLink to='/logout' onClick={ handleClickLogout } ><button className="btn btn-primary me-md-2" type="button" style ={{fontSize: "23px", marginLeft:"100px"}}>Logout</button></NavLink>
+                               {user ?  <NavLink to='/logout' onClick={ handleClickLogout } ><button className="btn  me-md-2" type="button" style ={{fontSize: "23px", marginLeft:"100px"}}>Logout</button></NavLink>
                                 :  <NavLink to='/login'  ><button className="btn btn-primary me-md-2" type="button" style ={{fontSize: "23px"}}>Login</button></NavLink>
                                 }
 
