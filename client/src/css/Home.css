@@ -30,8 +30,11 @@
 }
 
 .card-heading{
-text-align: center;   
-color: #800000; 
+/* text-align: center;    */
+color: #000000; 
+font-family: Georgia, 'Times New Roman', Times, serif;
+font-weight: 800;
+
 }
 .searchbar{
     width: 24vw;
@@ -53,7 +56,7 @@ color: #800000;
     text-align: center;
   }
 
-.form-control{
+.icon{
     padding-left: 25px;
     background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
     background-size: 22px;
