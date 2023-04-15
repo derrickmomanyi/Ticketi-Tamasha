@@ -34,11 +34,9 @@ function EventCard({ event }) {
          
     return (
         <>
-            <div className="card " style={{ width: '18rem'}}>
-            <NavLink  to={`/events/${event.id}`}>
-                <img src={image} className="card-img-top"alt={image} />
-                </NavLink>
-                <div className="card-body">                    
+            <div className="card" style={{ width: '18rem'}}>
+                <img src={event.image} className="card-img-top"alt={event.image} />
+                <div className="card-body">
                     <div>
                         <h5 className="card-title">{truncate(title, 20)}</h5>
                         <div className="date-box">                       
