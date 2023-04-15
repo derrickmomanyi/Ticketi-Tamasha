@@ -100,9 +100,9 @@ function EachEvent(){
             <div className="event-details-body" style={{display:"flex"}}>
                 <img src={image} className="event-image" alt={title}/>
                 <div className="date">
-                    <span style={{ marginLeft: '45px'}}>{dayInWords.toUpperCase()}  </span> <br/>
-                    <span style={{ marginLeft: '45px'}}>{day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/> 
-                    <span>{monthInWords.toUpperCase()} 2023</span>
+                    <span style={{ marginLeft: '45px', color:'white'}}>{dayInWords.toUpperCase()}  </span> <br/>
+                    <span style={{ marginLeft: '45px', color:'white'}}>{day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/> 
+                    <span style={{ color:'white'}}>{monthInWords.toUpperCase()} 2023</span>
                 </div>
                 
                 <div className="event-details">
