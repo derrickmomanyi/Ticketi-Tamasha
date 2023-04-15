@@ -60,7 +60,7 @@ function EventCard({ event, user }) {
 
             <div className="card " style={{ width: '18rem'}}>
             <NavLink  to={`/events/${event.id}`}>
-                <img src={image} className="card-img-top"alt={image} />
+                <img src={image} className="card-img-top"alt={title} />
                 </NavLink>
                 <div className="card-body">                    
                     <div className="title-like">
