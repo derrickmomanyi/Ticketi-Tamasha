@@ -42,7 +42,7 @@ function EventCard({ event }) {
                     <div>
                         <h5 className="card-title">{truncate(title, 20)}</h5>
                         <div className="date-box">                       
-                            <span>{dayInWords}, {day}<sup>{getOrdinalSuffix(day)}</sup>, {monthInWords}</span>                        
+                            <span>{dayInWords}, {monthInWords} {day}<sup>{getOrdinalSuffix(day)}</sup></span>                        
                         </div>
                         <label>{location.toUpperCase()}</label>                        
                     </div>
