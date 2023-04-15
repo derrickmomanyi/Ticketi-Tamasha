@@ -1,7 +1,7 @@
 puts "🌱 Seeding Events..."
 
 Event.create([{
-    title: "Gentleman Live in Nairobi",
+    title: "Gentleman in Nairobi",
              image: "https://tikiti.co.ke/images/6421b308c1e2d.jpg",
              category: "Music",
              description: "Join us for an evening of live reggae music in the park.",
