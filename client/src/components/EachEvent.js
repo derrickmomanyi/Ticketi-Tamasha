@@ -97,7 +97,7 @@ function EachEvent(){
                  <h1>{title}</h1>
                  <a href="#payment"><button  type="button" className="btn btn-danger">BUY TICKET</button></a>
             </div>
-            <div className="event-details-body" style={{display:"flex"}}>
+            <div className="event-details-body">
                 <img src={image} className="event-image" alt={title}/>
                 <div className="date">
                     <span style={{ marginLeft: '45px', color:'white'}}>{dayInWords.toUpperCase()}  </span> <br/>
@@ -106,25 +106,31 @@ function EachEvent(){
                 </div>
                 
                 <div className="event-details">
-                    <span>Runs till: {dayInWords}, {monthInWords} {day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/>                    
-                    <span>Time: {localTime} - {endTimeFormatted}</span> <br/>
-                    <span>Location: {location}</span> <br/>
-                    <span>Host: {hosted_by}</span> <br/>
-                    <span>Featuring: {featuring}</span><br/>
-                    <span>Dress Code: {dress_code}</span><br/>
-                    <span>{description}</span>
-                </div>
-
+                    <div>
+                        <label>Runs till:<span>{dayInWords}, {monthInWords} {day}<sup>{getOrdinalSuffix(day)}</sup></span> </label>  <br/>                 
+                        <label>Time:<span>{localTime} - {endTimeFormatted}</span> </label> <br/>
+                        <label>Location:<span>{location}</span> </label> <br/>
+                    </div>
+                    <div style={{marginLeft:"100px"}}>
+                        <label>Host:<span>{hosted_by}</span> </label> <br/>
+                        <label>Featuring:<span>{featuring}</span></label> <br/>
+                        <label>Dress Code:<span>{dress_code}</span><br/></label> <br/>
+                    </div>                  
+                </div>              
             </div>
+              <div className="event-description">
+                <span>{description}</span>
+                </div>
+          
             <div className="event-highlight">
-                <p> Get your tickets to {title}</p>
-                <span>Kindly indicate how many tickets you'd like</span>
+                <p> Get your tickets to {title} </p>
+                <h6>Kindly indicate how many tickets you'd like</h6>
             </div>
             <div className="event-table">              
 
                 <table className="table">
                 <thead className="thead-dark">
-                    <tr>
+                    <tr className="thead-text">
                     <th scope="col">Ticket</th>
                     <th scope="col">Price</th>
                     <th scope="col">Quantity</th>
@@ -132,7 +138,7 @@ function EachEvent(){
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr className="trow-early">
                         <td>Early Bird<br/>Closes on {endTimeFormatted}</td>
                         <td>Kshs {earlyBirdPrice.toFixed(2)}</td>
                         <td>
@@ -172,7 +178,7 @@ function EachEvent(){
                          </td>
                         <td>Kshs {advanceSubtotal.toFixed(2)}</td>
                     </tr>
-                    <tr>                    
+                    <tr  className="trow-vip">                    
                         <td>VIP<br/>Closes {endTimeFormatted}</td>
                         <td>Kshs {VIPPrice.toFixed(2)}</td>
                         <td>
@@ -192,7 +198,7 @@ function EachEvent(){
                          </td>
                         <td>Kshs {VIPSubtotal.toFixed(2)}</td>
                     </tr>
-                    <tr>
+                    <tr className="trow-total">
                         <td></td>
                         <td></td>
                         <td>TOTAL TICKETS<br/>{totalTickets} Tickets</td>                        
@@ -202,8 +208,38 @@ function EachEvent(){
                 </table>
 
             </div>
-            <div className="payment_details" id="payment">
+            <div className="payment-details" id="payment">
+                <h3 style={{marginLeft: "580px"}}>Enter Your Details</h3>
+                <form >
+                    <div >
+                    <input className="form-control"
+                    type="text" 
+                    placeholder="Name" 
+                    name="name"                     
+                    required/>
+                    <br/>
 
+                    <input className="form-control"
+                    type="email"
+                    placeholder="Email"
+                    name="email"                   
+                    required/>
+                    <br/>  
+
+                    <input className="form-control"
+                    type="number"
+                    placeholder="Phone Number"
+                    name="number"                   
+                    required/>
+                                      
+
+                    <button className="btn btn-primary pay" type="submit">Proceed To Pay</button>
+                    </div>                    
+       
+                </form>
+                <div className="last-div">
+
+                    </div>
             </div>
 
 
