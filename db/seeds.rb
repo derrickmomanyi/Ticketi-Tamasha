@@ -60,7 +60,7 @@ Event.create([{
           
 },
 {
-   title: "concours D'elegance",
+   title: "Concours D'elegance",
              image: "https://tikiti.co.ke/images/62ebba36dd39c.jpg",
              category: "Motor Show",
              description: "See your favorite classic cars on display.",
