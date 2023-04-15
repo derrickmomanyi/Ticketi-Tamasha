@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+
+import React,{useState} from "react";
+
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
-
-
 
 function EventCard({ event, user }) {
     // console.log(user);
