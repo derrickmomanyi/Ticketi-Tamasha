@@ -1,4 +1,3 @@
-import React from "react";
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
