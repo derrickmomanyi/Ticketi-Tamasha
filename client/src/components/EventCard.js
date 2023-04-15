@@ -2,8 +2,7 @@ import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
 
-function EventCard({ event, user }) {
-    // console.log(user);
+function EventCard({ event, user }) {    
   
     const {id, image, title, date, location} = event
     const [liked, setLiked] = useState(false) 
