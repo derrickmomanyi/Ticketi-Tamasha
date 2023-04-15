@@ -1,6 +1,8 @@
+import React from "react";
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
+
 
 
 function EventCard({ event, user }) {
@@ -8,10 +10,10 @@ function EventCard({ event, user }) {
   
     const {id, image, title, date, location} = event
     const [liked, setLiked] = useState(false) 
-
     function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
       }
+
 
       const likedEvent = {
     customer_id: user ? user.id : 1, event_id: event.id
@@ -59,6 +61,7 @@ function EventCard({ event, user }) {
          
     return (
         <>
+
             <div className="card " style={{ width: '18rem'}}>
             <NavLink  to={`/events/${event.id}`}>
                 <img src={image} className="card-img-top"alt={image} />
@@ -85,12 +88,6 @@ function EventCard({ event, user }) {
                             </span>                        
                             
                         </div>
-                        
-                       
-                                               
-                   
-                 
-
 
                 </div>
             </div>

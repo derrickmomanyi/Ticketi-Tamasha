@@ -1,13 +1,15 @@
 import React from "react";
-import { useContext } from "react";
-import { UserContext } from "../context/user";
+// import { useContext } from "react";
+// import { UserContext } from "../context/user";
 import '../css/Home.css';
 import EventCard from "./EventCard";
 
 
 
 function Home({ events, handleSearch, search }) {
+
     const { user } = useContext(UserContext)
+
 
     return (
         <>
@@ -23,7 +25,6 @@ function Home({ events, handleSearch, search }) {
                 </div>
             </div><br />
 
-
             <div className="events-body">
                 <div className="card-heading col-md-12">
                     <h2 >Events in Kenya</h2>
@@ -31,14 +32,13 @@ function Home({ events, handleSearch, search }) {
                 </div>
                 <div className="row">
                     {events.map(event =>
-                    
-                        
+   
                             <EventCard key={event.id} event={event} user= {user} />
-                       
-
+  
                     )}
                 </div>
             </div>
+
 
         </>
     )

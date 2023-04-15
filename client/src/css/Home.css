@@ -3,22 +3,23 @@
 }
 .home {
     background-image: url("https://static1.squarespace.com/static/588f75c9d1758ed4bee19d6d/t/62aa3db189d0b3375b6277c7/1664237977770/DuvalFolx-42.jpg?format=1500w");
-    height: 60vh;
+    height: 50vh;
     background-size: cover;
 }
 
 .transbox {
     background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(15, 15, 15));
-    height: 60vh;
+    height: 50vh;
 }
 
 .text-home h1 {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 40px;
 }
 
 .text-home p {
     color: #ffffff;
+    font-size: 20px;
 
 }
 
@@ -26,7 +27,8 @@
     width: 50%;
     justify-content: center;
     align-items: center;
-    padding: 8% 3%;
+    padding: 8% 8%;
+
 }
 
 .card-heading{
@@ -42,7 +44,7 @@ font-weight: 800;
 
 
 .events-body{       
-    padding-top: 10px;        
+    padding-top: 10px; 
     /* background: linear-gradient(transparent, rgba(0, 0, 0, 1));    */
     padding-left: 150px;
     padding-right: 80px;

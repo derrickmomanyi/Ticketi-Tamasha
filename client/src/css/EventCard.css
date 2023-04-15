@@ -23,10 +23,12 @@
 }
 
 .card-title{
+
   float: left;
   font-size: 18px;
   color: #010b26;
   width: 85%;
+
 }
 
 .date-box{
@@ -34,8 +36,7 @@
     font-weight: 600;
     float: left;
     position: relative;
-    
-   
+ 
 }
 
 .date-box span{
@@ -76,4 +77,5 @@ label {
 .fa-heart{
   margin-top: 5px;   
 }
+
 
