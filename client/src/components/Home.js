@@ -1,13 +1,13 @@
 import React from "react";
-// import { useContext } from "react";
-// import { UserContext } from "../context/user";
+import { useContext } from "react";
+import { UserContext } from "../context/user";
 import '../css/Home.css';
 import EventCard from "./EventCard";
 
 
 
 function Home({ events, handleSearch, search }) {
-    // const { user } = useContext(UserContext)
+    const { user } = useContext(UserContext)
 
     return (
         <>
@@ -33,7 +33,7 @@ function Home({ events, handleSearch, search }) {
                     {events.map(event =>
                     
                         
-                            <EventCard key={event.id} event={event} />
+                            <EventCard key={event.id} event={event} user= {user} />
                        
 
                     )}

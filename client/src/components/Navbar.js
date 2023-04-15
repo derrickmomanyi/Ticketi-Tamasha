@@ -10,7 +10,7 @@ function Navbar() {
     const navigate = useNavigate();
     const { user, setUser } = useContext(UserContext) 
 
-    console.log(user?.admin);
+    // console.log(user?.admin);
 
 
     function handleClickLogout(){
