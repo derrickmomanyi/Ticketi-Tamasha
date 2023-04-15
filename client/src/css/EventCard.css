@@ -23,16 +23,20 @@
 }
 
 .card-title{
- 
 
+  float: left;
   font-size: 18px;
   color: #010b26;
+  width: 85%;
+
 }
 
 .date-box{
     margin-top: 2px;    
     font-weight: 600;
-   
+    float: left;
+    position: relative;
+ 
 }
 
 .date-box span{
@@ -43,7 +47,35 @@
 label {
   display:block;
   color: rgba(0, 0, 0, 0.9);
-  margin-top: 14px;
-  /* margin-bottom: .5em; */
+  margin-top:10px;
+  margin-bottom: -1.5em;
   font-size: 13px;
+  position: relative;
+  float: left;
+  
 }
+
+.event-like{  
+    left: 30px;
+    top: -2px;
+    position: relative;
+}
+
+
+.fa-solid{
+  transition: .1s;
+}
+
+.fa-solid:active{
+  transform: scale(2);
+}
+
+.liked{
+  color: red;
+}
+
+.fa-heart{
+  margin-top: 5px;   
+}
+
+

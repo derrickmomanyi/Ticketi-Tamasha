@@ -28,6 +28,7 @@
     justify-content: center;
     align-items: center;
     padding: 8% 8%;
+
 }
 
 .card-heading{
@@ -43,8 +44,8 @@ font-weight: 800;
 
 
 .events-body{       
-    padding-top: 10px;        
-    background: linear-gradient(transparent, rgba(0, 0, 0, 1));   
+    padding-top: 10px; 
+    /* background: linear-gradient(transparent, rgba(0, 0, 0, 1));    */
     padding-left: 150px;
     padding-right: 80px;
     min-height: 250vh;
