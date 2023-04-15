@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../context/user";
+import '../css/EachEvent.css';
 
 
 function EachEvent(){
@@ -26,7 +27,7 @@ function EachEvent(){
 
         if (!isLoaded) return <h2 className='loading'>Loading...</h2>
 
-        const {title, image, category, description, hosted_by, featuring, dress_code, location, date, time ,tickets, price} = event
+        const {title, image, description, hosted_by, featuring, dress_code, location, date, time, price} = event
         
         const earlyBirdPrice = price;
         const advancePrice = price * 2;
@@ -50,16 +51,57 @@ function EachEvent(){
         const handleVIPChange = (event) => {
         setVIPTicket(parseInt(event.target.value));
         };
+
+
+        const dates = new Date(date);
+        const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0,3) // "WED"
+        const day = dates.toLocaleString("default", { day: "numeric" })// "15"
+        const monthInWords = dates.toLocaleString("default", { month: "long" }).slice(0,3) // "APR"
+        
+    
+        function getOrdinalSuffix(day) {
+            const j = day % 10, k = day % 100;
+            if (j === 1 && k !== 11) {
+              return "st";
+            }
+            if (j === 2 && k !== 12) {
+              return "nd";
+            }
+            if (j === 3 && k !== 13) {
+              return "rd";
+            }
+            return "th";
+          }
+
+          const localTime = new Date(time).toLocaleString(undefined, {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true,
+          });
         
         
 
     return(
         <>
         <div className="event_body">
-            <div className="event-title">
+            <div className="event-title" style={{display:"flex"}}>
                  <h1>{title}</h1>
+                 <a href="#payment"><button  type="button" className="btn btn-danger">BUY TICKET</button></a>
             </div>
-            <div className="event-details">
+            <div className="event-details-body" style={{display:"flex"}}>
+                <img src={image} className="event-image" alt={title}/>
+                <div className="event-date">
+                    <span>{date}</span>
+                </div>
+                <div className="event-details">
+                    <span>Runs till: {dayInWords}, {monthInWords} {day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/>                    
+                    <span>Time: {localTime}</span> <br/>
+                    <span>Location: {location}</span> <br/>
+                    <span>Host: {hosted_by}</span> <br/>
+                    <span>Featuring: {featuring}</span><br/>
+                    <span>Dress Code: {dress_code}</span><br/>
+                    <span>{description}</span>
+                </div>
 
             </div>
             <div className="event-highlight">
@@ -148,7 +190,7 @@ function EachEvent(){
                 </table>
 
             </div>
-            <div className="payment_details">
+            <div className="payment_details" id="payment">
 
             </div>
 

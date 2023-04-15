@@ -1,0 +1,20 @@
+/* 
+.event_body{
+       
+    
+} */
+
+.event-title{
+    border-bottom: 1px solid rgb(68, 65, 65);
+}
+
+.event-image{
+    height: auto;
+    max-height: 500px;    
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.btn{
+    margin-left: 790px;
+}
