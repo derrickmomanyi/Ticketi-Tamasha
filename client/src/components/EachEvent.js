@@ -76,26 +76,38 @@ function EachEvent(){
           const localTime = new Date(time).toLocaleString(undefined, {
             hour: "numeric",
             minute: "numeric",
-            hour12: true,
+            hour12: true
+            
+          });
+         
+          const endTime = new Date(time);
+          endTime.setHours(23, 59, 59);
+          const endTimeFormatted = endTime.toLocaleString(undefined, {
+            hour: "numeric",
+            minute: "numeric",
+            hour12: true
           });
         
         
 
     return(
         <>
-        <div className="event_body">
-            <div className="event-title" style={{display:"flex"}}>
+        <div className="event-body">
+            <div className="event-title">
                  <h1>{title}</h1>
                  <a href="#payment"><button  type="button" className="btn btn-danger">BUY TICKET</button></a>
             </div>
             <div className="event-details-body" style={{display:"flex"}}>
                 <img src={image} className="event-image" alt={title}/>
-                <div className="event-date">
-                    <span>{date}</span>
+                <div className="date">
+                    <span style={{ marginLeft: '45px'}}>{dayInWords.toUpperCase()}  </span> <br/>
+                    <span style={{ marginLeft: '45px'}}>{day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/> 
+                    <span>{monthInWords.toUpperCase()} 2023</span>
                 </div>
+                
                 <div className="event-details">
                     <span>Runs till: {dayInWords}, {monthInWords} {day}<sup>{getOrdinalSuffix(day)}</sup></span> <br/>                    
-                    <span>Time: {localTime}</span> <br/>
+                    <span>Time: {localTime} - {endTimeFormatted}</span> <br/>
                     <span>Location: {location}</span> <br/>
                     <span>Host: {hosted_by}</span> <br/>
                     <span>Featuring: {featuring}</span><br/>
@@ -105,8 +117,8 @@ function EachEvent(){
 
             </div>
             <div className="event-highlight">
-                <p> Get your events to {title}</p>
-                <span>KIndly indicate how many tickets you'd like</span>
+                <p> Get your tickets to {title}</p>
+                <span>Kindly indicate how many tickets you'd like</span>
             </div>
             <div className="event-table">              
 
@@ -121,7 +133,7 @@ function EachEvent(){
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Early Bird<br/>Closes on {date}</td>
+                        <td>Early Bird<br/>Closes on {endTimeFormatted}</td>
                         <td>Kshs {earlyBirdPrice.toFixed(2)}</td>
                         <td>
                             <select value={earlyBirdTicket} onChange={handleEarlyBirdChange}>
@@ -141,7 +153,7 @@ function EachEvent(){
                         <td>Kshs {earlyBirdSubtotal.toFixed(2)}</td>
                     </tr>
                     <tr>                    
-                        <td>Advance Tickets<br/>Closes on {date}</td>
+                        <td>Regular<br/>Closes on {endTimeFormatted}</td>
                         <td>Kshs {advancePrice.toFixed(2)}</td>
                         <td>
                             <select value={advanceTicket} onChange={handleAdvancedChange}>
@@ -161,7 +173,7 @@ function EachEvent(){
                         <td>Kshs {advanceSubtotal.toFixed(2)}</td>
                     </tr>
                     <tr>                    
-                        <td>VIP<br/>Closes {date}</td>
+                        <td>VIP<br/>Closes {endTimeFormatted}</td>
                         <td>Kshs {VIPPrice.toFixed(2)}</td>
                         <td>
                             <select value={VIPTicket} onChange={handleVIPChange}>

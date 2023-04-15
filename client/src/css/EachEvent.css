@@ -1,11 +1,37 @@
-/* 
-.event_body{
-       
-    
-} */
+
+.event-body{
+    width: 80%;  
+   margin-left: 200px;
+   margin-top: 10px;
+   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.8), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+   transition: 500ms;  
+}
+
+/* .my-div {
+    width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 16px; */
 
 .event-title{
-    border-bottom: 1px solid rgb(68, 65, 65);
+    border-bottom: 1px solid rgb(68, 65, 65);    
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 15px;
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 .event-image{
@@ -13,8 +39,32 @@
     max-height: 500px;    
     object-fit: contain;
     border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 15px;
+    
 }
 
 .btn{
-    margin-left: 790px;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.date{
+    background-color: red;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 9.7vh;
+    width: 15vh;   
+    font-size: 18px;    
+}
+
+span{
+    color: white;
+    margin-left: 25px; 
+         
+}
+
+.event-details{
+    margin-left: 30px;
 }
