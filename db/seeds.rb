@@ -1,15 +1,7 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-#some cool seeding data goes here
-puts ":seedling: Seeding messages..."
+puts "🌱 Seeding Events..."
 
 Event.create([{
-    title: "Gentleman Live in Nairobi",
+    title: "Gentleman in Nairobi",
              image: "https://tikiti.co.ke/images/6421b308c1e2d.jpg",
              category: "Music",
              description: "Join us for an evening of live reggae music in the park.",
@@ -68,7 +60,7 @@ Event.create([{
           
 },
 {
-   title: "concours D'elegance",
+   title: "Concours D'elegance",
              image: "https://tikiti.co.ke/images/62ebba36dd39c.jpg",
              category: "Motor Show",
              description: "See your favorite classic cars on display.",
@@ -83,4 +75,4 @@ Event.create([{
            
 }
 ])
-puts ":white_check_mark: Done seeding!"
+puts "✅ Done seeding!"

@@ -10,9 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_13_083648) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_14_120357) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "customer_events", force: :cascade do |t|
+    t.bigint "customer_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["customer_id"], name: "index_customer_events_on_customer_id"
+    t.index ["event_id"], name: "index_customer_events_on_event_id"
+  end
 
   create_table "customers", force: :cascade do |t|
     t.string "username"
@@ -40,6 +49,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_083648) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "organizer_events", force: :cascade do |t|
+    t.bigint "organizer_id", null: false
+    t.bigint "event_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_organizer_events_on_event_id"
+    t.index ["organizer_id"], name: "index_organizer_events_on_organizer_id"
+  end
+
   create_table "organizers", force: :cascade do |t|
     t.string "username"
     t.string "email"
@@ -49,4 +67,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_13_083648) do
     t.boolean "admin", default: true
   end
 
+  add_foreign_key "customer_events", "customers"
+  add_foreign_key "customer_events", "events"
+  add_foreign_key "organizer_events", "events"
+  add_foreign_key "organizer_events", "organizers"
 end
