@@ -5,10 +5,10 @@ import '../css/Home.css';
 import EventCard from "./EventCard";
 
 
-function Home({ events, handleSearch, search }) {
-    const { user } = useContext(UserContext)
-    console.log(events);
 
+function Home({ events, handleSearch, search }) {
+
+    const { user } = useContext(UserContext)
 
 
     return (
@@ -16,39 +16,30 @@ function Home({ events, handleSearch, search }) {
             <div className="home row" id="home">
                 <div className="transbox">
                     <div className="text-home">
-                        <h1>What you need, is an Event, to remember for a lifetime!!!</h1>
-                        <p>Less work, more play. Whether you're into online streams weekend festivals or daytime get-togethers; we have something for you. Find what you're looking for and join the movement.</p>
+                        <h1>An Event To Remember for Life!</h1>
+                        <p>Less work, more play. <br/> Whether you're into online streams, <br/> Weekend festivals or daytime get-togethers <br/> We have something for you. </p>
                         <form action="" className="searchbar">
-                            <input type="search" className="form-control" required name="search" value={search} onChange={handleSearch} placeholder="Search event by category"></input>
+                            <input type="search" className="form-control icon" required name="search" value={search} onChange={handleSearch} placeholder="Search event by category"></input>
                         </form>
                     </div>
                 </div>
             </div><br />
 
-
-            <div className="row">
+            <div className="events-body">
                 <div className="card-heading col-md-12">
-                    <h2>Events</h2>
-                    <h5>Buy tickets in advance to popular events</h5>
+                    <h2 >Events in Kenya</h2>
+                    {/* <h5>Buy tickets in advance to popular events</h5> */}
                 </div>
                 <div className="row">
-                    {events.map((event) =>
-                        <div className="col-md-3">
-                            <EventCard key={event.id} event={event} />
-                        </div>
-
+                    {events.map(event =>
+   
+                            <EventCard key={event.id} event={event} user= {user} />
+  
                     )}
                 </div>
             </div>
 
 
-
-
-
-
-
-            {user && !user?.admin ? <h1>Home customer</h1> : ''}
-            {user?.admin ? <h1>Home organizer </h1> : ''}
         </>
     )
 }
