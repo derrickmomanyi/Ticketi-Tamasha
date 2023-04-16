@@ -11,7 +11,7 @@ Event.create([{
              location: "Nairobi",
              date: Date.new(2023, 6, 15),
              time: Time.new(2023, 6, 15, 19, 0, 0),
-             tickets: 100,
+             tickets: 10,
              price: 10
            
 },

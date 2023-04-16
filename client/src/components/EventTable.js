@@ -1,11 +1,12 @@
+
 import React, { useState } from "react";
 
 
-function EventTable( {price, endTimeFormatted} ){
+function EventTable( {price, endTimeFormatted, totalTicketsAvailable} ){
     const [earlyBirdTicket, setEarlyBirdTicket] = useState(0);
     const [advanceTicket, setAdvanceTicket] = useState(0);
     const [VIPTicket, setVIPTicket] = useState(0);
-
+    const [errorMessage, setErrorMessage] = useState("");
 
     const earlyBirdPrice = price;
     const advancePrice = price * 2;
@@ -19,20 +20,46 @@ function EventTable( {price, endTimeFormatted} ){
     const totalPrice = earlyBirdSubtotal + advanceSubtotal + VIPSubtotal;
 
     const handleEarlyBirdChange = (event) => {
-        setEarlyBirdTicket(parseInt(event.target.value));
+        const selectedTickets = parseInt(event.target.value);
+            if (selectedTickets > totalTicketsAvailable - advanceTicket - VIPTicket) {
+            setErrorMessage( `No more tickets left, select a different quantity or check for another event ticket's availabilitty`);
+            } else {
+            setEarlyBirdTicket(selectedTickets);
+            setErrorMessage("");
+            }
+        
       };
 
     const handleAdvancedChange = (event) => {
-    setAdvanceTicket(parseInt(event.target.value));
+        const selectedTickets = parseInt(event.target.value);
+        if (selectedTickets > totalTicketsAvailable - earlyBirdTicket - VIPTicket) {
+          setErrorMessage(
+            `No more tickets left, select a different quantity or check for another event ticket's availability`
+          );
+        } else {
+          setAdvanceTicket(selectedTickets);
+          setErrorMessage("");
+        }
     };
 
     const handleVIPChange = (event) => {
-    setVIPTicket(parseInt(event.target.value));
+        const selectedTickets = parseInt(event.target.value);
+        if (
+            selectedTickets > totalTicketsAvailable - earlyBirdTicket - advanceTicket
+          ) {
+            setErrorMessage(
+                `No more tickets left, select a different quantity or check for another event ticket's availabilitty`
+            );
+          } else {
+            setVIPTicket(selectedTickets);
+            setErrorMessage("");
+          }
     };
    
 
     return(
         <>
+         {errorMessage && <div className="alert alert-danger" style={{marginBottom: "0px"}}>{errorMessage}</div>}
         <table className="table">
                 <thead className="thead-dark">
                     <tr className="thead-text">
@@ -47,20 +74,12 @@ function EventTable( {price, endTimeFormatted} ){
                         <td>Early Bird<br/>Closes on {endTimeFormatted}</td>
                         <td>Kshs {earlyBirdPrice.toFixed(2)}</td>
                         <td>
-                            <select value={earlyBirdTicket} onChange={handleEarlyBirdChange}>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>                            
-                            </select>
-                         </td>
+                        <select value={earlyBirdTicket} onChange={handleEarlyBirdChange}>
+                            {[...Array(6)].map((_, i) => (
+                            <option key={i} value={i}>{i}</option>
+                            ))}
+                        </select>
+                        </td>
                         <td>Kshs {earlyBirdSubtotal.toFixed(2)}</td>
                     </tr>
                     <tr>                    
@@ -68,17 +87,11 @@ function EventTable( {price, endTimeFormatted} ){
                         <td>Kshs {advancePrice.toFixed(2)}</td>
                         <td>
                             <select value={advanceTicket} onChange={handleAdvancedChange}>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>                            
+                            {[...Array(5)].map((_, i) => (
+                                <option key={i} value={i}>
+                                {i}
+                                </option>
+                            ))}                           
                             </select>
                          </td>
                         <td>Kshs {advanceSubtotal.toFixed(2)}</td>
@@ -88,17 +101,11 @@ function EventTable( {price, endTimeFormatted} ){
                         <td>Kshs {VIPPrice.toFixed(2)}</td>
                         <td>
                             <select value={VIPTicket} onChange={handleVIPChange}>
-                            <option value="0">0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>                            
+                            {[...Array(4)].map((_, i) => (
+                                <option key={i} value={i}>
+                                {i}
+                                </option>
+                            ))}                               
                             </select>
                          </td>
                         <td>Kshs {VIPSubtotal.toFixed(2)}</td>
