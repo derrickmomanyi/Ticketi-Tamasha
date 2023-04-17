@@ -30,7 +30,7 @@ function Navbar() {
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container-fluid" style={{ height: "6vh" }}>
                     <a className="navbar-brand" href="/" style={{ color: "#008080" }}>
-                        <strong style={{marginLeft:"50px", fontSize: "34px"}}>TIKETI TAMASHA</strong>
+                        <strong style={{marginLeft:"67%", fontSize: "34px"}}>TIKETI TAMASHA</strong>
                     </a>
                         <ul
                             className="navbar-nav me-auto mb-2 mb-lg-0"
