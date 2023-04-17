@@ -228,7 +228,10 @@ Event.create([{
     image: "https://tikiti.co.ke/images/6261cbef54fe2.jpg",
     category: "Music",
     description: "At the Argenti Sky Lounge & restaurant from 2pm to 9pm!
-                  Do not miss out!.",
+                  Do not miss out!
+                  Get ready for a night of groovy beats, positive vibes and good times. Our event is a celebration of the rich cultural heritage and music of Jamaica, and we aim to transport you to the sunny shores of the Caribbean.
+                 As you walk in, you'll be greeted with a colorful atmosphere, complete with vibrant decorations, reggae-inspired art, and flags representing the Caribbean. The stage will be set with an array of musical instruments, and our talented musicians will be ready to deliver an unforgettable performance.
+                The music will be a mix of traditional and contemporary reggae, featuring popular classics and new releases from the genre. The rhythm section will provide the backbone of the music, with pulsating bass lines and upbeat drum grooves that will get you moving. The horns will add a touch of soulful melody, while the vocals will be a reflection of the positive, uplifting lyrics that reggae is known for.",
     hosted_by: "Brian Msafiri",
     featuring: "Dj Paps",
     dress_code: "Casual",
@@ -371,7 +374,9 @@ Event.create([{
     category: "Music",
     description: "Soul En Blanc
                   Soul White Party
-                  Carnivore Simba Saloon.",
+                  Carnivore Simba Saloon
+                  Our event is a celebration of this timeless genre, and we aim to bring you an unforgettable experience that will leave you wanting more.
+                  As you enter, you'll be greeted with a warm and inviting atmosphere, complete with dimmed lights, plush seating, and an elegant stage set with musical instruments. Our talented musicians will be ready to deliver a powerful performance that will showcase the beauty and depth of soul music.",
     hosted_by: "Dj Adrian",
     featuring: "Dj John, Dj E, Dj Wattson",
     dress_code: "White",
@@ -382,8 +387,8 @@ Event.create([{
     price: 20,
 },
 {
-    title: "Edufa",
-    image: "https://kenyaculturalcentre.go.ke/portal/api/docs/1478883551Edufa%20Rerun%20Poster.jpeg",
+    title: "The Taitanic",
+    image: "https://www.subplotstudio.com/resources/images/productions/4327/9409/art.sample.437.jpg",
     category: "Theatre play",
     description: "The eponymous character, Edufa, is a western educated man, wealthy and well respected by the society who has an obsessive desire to live long. To satisfy this unquenchable thirst, he consults a diviner who tells him to find someone who loves him and is willing to die for him.",
     hosted_by: "The Clan",
@@ -399,7 +404,7 @@ Event.create([{
     title: "The Sunday Braai",
     image: "https://www.ticketsasa.com/components/com_enmasse/upload/IMG_0346.JPG1681368087.jpg",
     category: "Culture",
-    description: "Sample dishes from some of the city's top chefs.",
+    description: "Sample dishes from some of the city's top chefs.The event can include performances, exhibitions, workshops, and interactive activities that highlight the unique aspects of the culture being celebrated. Food and drinks can also be an important part of the event, allowing attendees to sample traditional dishes and learn about the culinary traditions of the culture being celebrated.",
     hosted_by: "Equipe Choque",
     featuring: "Local chefs",
     dress_code: "Casual",
@@ -411,7 +416,7 @@ Event.create([{
 },
 {
     title: "Copa Del Nairobi",
-    image: "https://cdn.stayhappening.com/events8/banners/dd543319b666a7874f492994ee5df3b594a5171fe47523008995bb566ee0cd7a-rimg-w509-h720-gmir.jpg?v=1637919322",
+    image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/soccer-tournament-poster-template-instagram-design-0c0ab6c532dbcf9cd1ede0caf0cd78c9_screen.jpg?ts=1624461367",
     category: "Sports",
     description: "Copa Del is a football tournament showcasing local talent and offering potentials a chance to make it to the big leagues.",
     hosted_by: "Copa Del",
@@ -553,7 +558,9 @@ Event.create([{
     title: "African Cup For Club Champions",
     image: "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1280,h_1280/https://www.africahockey.org/wp-content/uploads/2019/10/ACCC-24W-33M-Feb.-2023-Logo.jpg",
     category: "Sports",
-    description: "Come see your favourite hockey players in actoin.",
+    description: "Come see your favourite hockey players in actoin.Throughout the match, players will utilize various techniques such as dribbling, passing, and shooting to try and score goals. The team that scores the most goals by the end of the match is declared the winner. In the event of a tie, the match may go into extra time or a penalty shootout to determine the winner.
+
+    Football events are often accompanied by enthusiastic crowds, cheering on their favorite teams and players. The atmosphere is electric, with excitement building as the match progresses and the score remains close. Overall, football events provide an exciting and thrilling experience for players and fans alike.",
     hosted_by: "KCCC",
     featuring: "Various hockey Teams",
     dress_code: "Smart casual",
@@ -679,7 +686,7 @@ Event.create([{
     title: "A Night in Las Vagas Nairobi",
     image: "https://storage.googleapis.com/m_tickets/assets/event_poster/karnival.png",
     category: "Culture",
-    description: "Come see the latest works of local artists.",
+    description: "Come sample the best  of the best in local culture from music to food to local music from traditional instruments.",
     hosted_by: "Trip in the Wild",
     featuring: "Various artists",
     dress_code: "Smart casual",
@@ -693,7 +700,8 @@ Event.create([{
     title: "Smart sports",
     image: "https://gormahiafcke.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-07-at-9.29.55-AM-780x470.jpeg",
     category: "Sports",
-    description: "The final show who will take it all.",
+    description: "The final show who will take it all.Throughout the match, players will utilize various techniques such as dribbling, passing, and shooting to try and score goals. The team that scores the most goals by the end of the match is declared the winner. In the event of a tie, the match may go into extra time or a penalty shootout to determine the winner.
+                 Football events are often accompanied by enthusiastic crowds, cheering on their favorite teams and players. The atmosphere is electric, with excitement building as the match progresses and the score remains close. Overall, football events provide an exciting and thrilling experience for players and fans alike.",
     hosted_by: "Sportpesa",
     featuring: "Various local football clubs",
     dress_code: "Smart casual",
@@ -705,9 +713,10 @@ Event.create([{
 },
 {
     title: "Central Africa Motorcross Challange",
-    image: "https://fimafricahome.files.wordpress.com/2022/11/123456.jpeg?w=723",
+    image: "https://www.kenyabuzz.com/public//uploads/posters/1657097450.jpeg",
     category: "Motorshow",
-    description: "Come see the latest works of local pro dirt bike racers.",
+    description: "Come see the latest works of local pro dirt bike racers.car drift show is a thrilling and exciting event that showcases the skill and precision of drivers as they navigate their cars through a series of turns and twists with incredible speed and control. The show takes place on a specially designed track, which may include obstacles and sharp turns to challenge the drivers and add to the excitement.
+                  Drifting is a driving technique where the driver intentionally oversteers the car, causing the rear wheels to lose traction and slide sideways. Skilled drivers use this technique to maintain control of their vehicles while maneuvering through tight turns and corners at high speeds.",
     hosted_by: "FIM",
     featuring: "Various artists",
     dress_code: "casual",
