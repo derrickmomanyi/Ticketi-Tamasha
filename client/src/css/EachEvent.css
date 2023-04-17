@@ -131,9 +131,15 @@ span{
 }
 .pay{
     margin-left: 35%;
+    background-color: rgb(204, 84, 84);
+}
+
+.pay:hover{
+    color: rgb(17, 2, 2);
 }
 
 .last-div{
     margin-bottom: 100px;
     background-color: rgb(226, 226, 226);
 }
+

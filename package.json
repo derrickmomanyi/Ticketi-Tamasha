@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "client": "^0.0.1",
-    "prefix": "^1.0.0",
-    "react-router-dom": "^6.10.0"
-  }
-}
