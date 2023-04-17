@@ -1,0 +1,2 @@
+class PurchasedEvent < ApplicationRecord
+end
