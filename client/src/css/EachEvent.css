@@ -39,8 +39,6 @@
 
 .date{
     background-color: red;
-    margin-top: 40px;
-    margin-left: 60px;
     height: 9.7vh;
     width: 15vh;   
     font-size: 18px;    
@@ -49,18 +47,6 @@
 span{    
     margin-left: 25px;         
 }
-
-.event-details{
-    margin-left: 30px;
-    margin-top: 40px;   
-    display: flex;     
-   
-}
-
-.event-details-body{
-    display: flex;    
-}
-
 
 .event-details label{
     display:block;
@@ -75,12 +61,6 @@ span{
    font-weight: 380;
 }
 
-.event-description{
-    /* margin-left: 750px;
-    margin-top: 100px; */
-    transform: translate(74%, -400%);
-    width: 40vw
-}
 
 .event-highlight{
     background-color: rgb(226, 226, 226);
@@ -142,5 +122,27 @@ span{
 .last-div{
     margin-bottom: 100px;
     background-color: rgb(226, 226, 226);
+}
+.all-details{
+    display: flex;
+}
+.details-img{
+    width: 40%;
+}
+.event-details{
+    width: 60%;
+}
+.event-div{
+    padding-top: 2%;
+    display: flex;
+}
+.rtl{
+    margin-left: 30px  
+}
+.hfd{
+    margin-left: 30px
+}
+.event-description{
+    padding-top: 2%;
 }
 
