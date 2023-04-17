@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :customer_events
   resources :organizer_events
   resources :events
-
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#delete'
   get '/me', to: 'organizers#show'
