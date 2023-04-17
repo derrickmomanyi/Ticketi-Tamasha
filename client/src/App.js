@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout />}>
             <Route index element={<Home events={displayEvents} handleSearch={handleSearch} search={search} />} />
-            <Route path="customerevents" element={<CustomerEvents />} />
+            <Route path="customers/:id/events" element={<CustomerEvents />} />
             <Route path="organizerevents" element={<OrganizerEvents />} />
             <Route path="addevent" element={<AddEvent />} />
             <Route path="/events/:id" element = {<EachEvent />} />

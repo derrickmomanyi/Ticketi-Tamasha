@@ -50,7 +50,7 @@ function Navbar() {
                         </li>
 
                         {user && !user?.admin ? <li className="nav-item links">
-                            <NavLink to="/customerevents"
+                            <NavLink to={`/customers/${user.id}/events`}
                                 style={({ isActive }) =>
                                     isActive
                                         ? {
@@ -59,7 +59,7 @@ function Navbar() {
                                         }
                                         : { color: '#008080',textDecoration:'none' }
                                 }
-                            >Favourite</NavLink>
+                            >Favourites</NavLink>
                         </li> : null}
 
 
