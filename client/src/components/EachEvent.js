@@ -29,7 +29,7 @@ function EachEvent(){
 
         if (!isLoaded) return <h2 className='loading'>Loading...</h2>
 
-        const {title, description, price, time, tickets} = event
+        const {title, price, time, tickets} = event
 
         const endTime = new Date(time);
         endTime.setHours(23, 59, 59);
@@ -51,9 +51,6 @@ function EachEvent(){
             <div className="event-details-body">
                 <EachEventDetails  event= {event}/>             
             </div>
-              <div className="event-description">
-                <span>{description}</span>
-                </div>
           
             <div className="event-highlight">
                 <p> Get your tickets to {title} </p>
