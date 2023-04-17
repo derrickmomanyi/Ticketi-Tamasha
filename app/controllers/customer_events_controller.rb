@@ -1,3 +1,4 @@
+
 class CustomerEventsController < ApplicationController    
         before_action :find_customer_event, only: [:show, :destroy]
         skip_before_action :authorized_user, :admin_user
@@ -43,7 +44,5 @@ class CustomerEventsController < ApplicationController
             render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
         end
     
-    def render_unprocessable_entity_response(invalid)
-        render json: { errors: invalid.record.errors.full_messages }, status: :unprocessable_entity
-    end
+
 end
