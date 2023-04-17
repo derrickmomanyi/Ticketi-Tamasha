@@ -556,7 +556,7 @@ Event.create([{
 },
 {
     title: "African Cup For Club Champions",
-    image: "https://cdn.dribbble.com/users/617471/screenshots/5605171/media/7ecd76e2c335c4c0526b02c8b7ccc2d7.jpg?compress=1&resize=768x576&vertical=top",
+    image: "https://donboscogoa.ac.in/images/events/628477722a969.jpg",
     category: "Sports",
     description: "Come see your favourite hockey players in actoin.Throughout the match, players will utilize various techniques such as dribbling, passing, and shooting to try and score goals. The team that scores the most goals by the end of the match is declared the winner. In the event of a tie, the match may go into extra time or a penalty shootout to determine the winner.
 
@@ -600,7 +600,7 @@ Event.create([{
 },
 {
     title: "The Audacity of Hope",
-    image: "https://www.ticketsasa.com/components/com_enmasse/upload/PHOTO-2023-04-14-11-36-05.jpg1681463904.jpg",
+    image: "https://www.ticketsasa.com/components/com_enmasse/upload/KHS_FLOWER_BALL_.jpeg1679301152.jpg",
     category: "Theatre play",
     description: "Where would we be without hope? Hope in the face of difficulty,  Hope in the face of uncertainty. Hope against all odds. Ultimately, Gods greatest gift to us is hope.",
     hosted_by: "Engage Kenya Limited",
