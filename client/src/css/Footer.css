@@ -15,9 +15,11 @@
   width: 100%;
 }
 
-.column {
-  display: table;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-}
+
+  .column {
+    display: table;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
