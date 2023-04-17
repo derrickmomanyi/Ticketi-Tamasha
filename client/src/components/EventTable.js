@@ -111,7 +111,7 @@ function EventTable( {price, endTimeFormatted, totalTicketsAvailable} ){
                         <td>Kshs {VIPSubtotal.toFixed(2)}</td>
                     </tr>
                     <tr className="trow-total">
-                        <td></td>
+                        <td>{}</td>
                         <td></td>
                         <td>TOTAL TICKETS<br/>{totalTickets} Tickets</td>                        
                         <td>Kshs {totalPrice.toFixed(2)}</td>

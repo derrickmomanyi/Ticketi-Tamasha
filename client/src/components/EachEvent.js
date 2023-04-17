@@ -14,9 +14,8 @@ function EachEvent(){
     const [event, setEvent] = useState([])
     // const { user } = useContext(UserContext) 
     const { id } = useParams(); 
-    
-   
 
+    
     useEffect(() => {
         fetch(`/events/${id}`)
         .then((res) => res.json())
