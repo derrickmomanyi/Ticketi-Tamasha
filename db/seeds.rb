@@ -211,7 +211,7 @@ Event.create([{
 },
 {
     title: "Masinga TT",
-    image: "https://i0.wp.com/spaceyamagari.com/wp-content/uploads/2022/10/WhatsApp-Image-2022-10-31-at-9.48.14-PM-1.jpeg?resize=750%2C460&ssl=1",
+    image: "https://de.cdn-website.com/a4f8945f46504fdb8395fd73c3dc0ce0/DESKTOP/jpg/987.jpg",
     category: "Motor show",
     description: "The Masinga TT is an annual car event organized by club TT involving three main activities namely; Drags, Drifts and Gymkhana. Previously, the event featured hill climbs. Club TT hosts various events in different parts of the country including Kiambu, Muranga, Nyahururu and Masinga.",
     hosted_by: "Motor TT Club",
@@ -342,7 +342,7 @@ Event.create([{
 },
 {
     title: "World Under 20 Championships",
-    image: "https://i.ytimg.com/vi/2HbzkZoDBZc/mqdefault.jpg",
+    image: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/world-athletics-day-instagram-post-design-template-97d146133d2eaf6f04870e6813ce794a_screen.jpg?ts=1620140651",
     category: "Sports",
     description: "As the athletes arrive at the event, they are filled with excitement and anticipation for the upcoming competitions. The atmosphere is electric, with music blaring from the speakers, colorful flags waving in the breeze, and the sound of enthusiastic fans echoing through the stadium.",
     hosted_by: "Kanary Sports ",
@@ -556,7 +556,7 @@ Event.create([{
 },
 {
     title: "African Cup For Club Champions",
-    image: "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1280,h_1280/https://www.africahockey.org/wp-content/uploads/2019/10/ACCC-24W-33M-Feb.-2023-Logo.jpg",
+    image: "https://cdn.dribbble.com/users/617471/screenshots/5605171/media/7ecd76e2c335c4c0526b02c8b7ccc2d7.jpg?compress=1&resize=768x576&vertical=top",
     category: "Sports",
     description: "Come see your favourite hockey players in actoin.Throughout the match, players will utilize various techniques such as dribbling, passing, and shooting to try and score goals. The team that scores the most goals by the end of the match is declared the winner. In the event of a tie, the match may go into extra time or a penalty shootout to determine the winner.
 
@@ -572,7 +572,7 @@ Event.create([{
 },
 {
     title: "Kenya Auto & Motor Show",
-    image: "https://www.kenyabuzz.com/public//uploads/posters/1680686949.jpg",
+    image: "http://www.impact.co.th/userfiles/images/press/2022/02-11-43rd-motorshow2022-L.jpg",
     category: "Motorshow",
     description: "Int'l Trade Expo on al kind of Auto, Auto Parts, Accessories, Aftermarket, Feeding Industries, Retailing, Vehicle Parts, Chemicals Equipments, Auto Products, Hybrid Motor's & machinery etc.",
     hosted_by: "Auto & Motor",
@@ -642,7 +642,7 @@ Event.create([{
 },
 {
     title: "The Madretude",
-    image: "https://res.klook.com/image/upload/v1671701582/p3ycyleg3l6ltoaoqwij.jpg",
+    image: "https://www.kenyabuzz.com/public//uploads/posters/1652255138.jpg",
     category: "Motorshow",
     description: "Singapores largest and most iconic annual motoring event, the Singapore Motorshow will mark its return after a three-year hiatus at Suntec Singapore Convention & Exhibition Centre from January 12 to 15 2023.",
     hosted_by: "Motul",
@@ -698,7 +698,7 @@ Event.create([{
 },
 {
     title: "Smart sports",
-    image: "https://gormahiafcke.com/wp-content/uploads/2023/02/WhatsApp-Image-2023-02-07-at-9.29.55-AM-780x470.jpeg",
+    image: "https://sportsgroundproduction.blob.core.windows.net/cms/8789/61436/1426392/b49e36e9-11e9-4b22-85b3-fc8c850785b7_wo.png?t=638170817411300000",
     category: "Sports",
     description: "The final show who will take it all.Throughout the match, players will utilize various techniques such as dribbling, passing, and shooting to try and score goals. The team that scores the most goals by the end of the match is declared the winner. In the event of a tie, the match may go into extra time or a penalty shootout to determine the winner.
                  Football events are often accompanied by enthusiastic crowds, cheering on their favorite teams and players. The atmosphere is electric, with excitement building as the match progresses and the score remains close. Overall, football events provide an exciting and thrilling experience for players and fans alike.",
