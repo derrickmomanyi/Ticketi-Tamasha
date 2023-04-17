@@ -4,7 +4,7 @@ import React from "react";
 function AddEvent(){
     return(
         <>
-        <h1>AddEvent</h1>
+        <h2>AddEvent</h2>
         </>
     )
 }
