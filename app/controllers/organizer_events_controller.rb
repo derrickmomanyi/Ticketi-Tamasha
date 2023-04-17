@@ -1,8 +1,12 @@
 class OrganizerEventsController < ApplicationController
-    #permissions here
+    before_action :find_customer_event, only: [:show, :destroy]
     skip_before_action :authorized_user, :admin_user
-    wrap_parameters format: []
+    rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
+    rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response
 
+    def index
+        render json: OrganizerEvent.all, status: :ok
+    end
 
     def show
         organizer_event= find_organizer_event
@@ -10,7 +14,7 @@ class OrganizerEventsController < ApplicationController
     end
 
     def create 
-        organizer_event = OrganizerEvent.create!(customer_event_params)
+        organizer_event = OrganizerEvent.create!(organizer_event_params)
         render json: organizer_event, status: :created
     end
 
