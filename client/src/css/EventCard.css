@@ -34,13 +34,14 @@
 .date-box{
     margin-top: 2px;    
     font-weight: 600;
-    float: left;
+    float: left;    
     position: relative;
  
 }
 
 .date-box span{
   color: #ff8000;
+  margin-left: 0px;
 }
 
 
