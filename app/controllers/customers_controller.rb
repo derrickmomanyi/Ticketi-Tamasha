@@ -30,7 +30,12 @@ class CustomersController < ApplicationController
         customer = Customer.find(params[:id])
         customer.update!(customer_params)
         render json: customer, status: :ok
-      end
+    end
+
+    def customer_favourites
+      customer = Customer.find(params[:id])
+      render json: customer.customer_events
+    end
 
     private
 
