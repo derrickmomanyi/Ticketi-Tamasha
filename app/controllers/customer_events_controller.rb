@@ -1,4 +1,3 @@
-
 class CustomerEventsController < ApplicationController    
         before_action :find_customer_event, only: [:show, :destroy]
         skip_before_action :authorized_user, :admin_user
