@@ -1,0 +1,2 @@
+class PurchasedEventsController < ApplicationController
+end
