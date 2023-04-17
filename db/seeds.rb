@@ -203,7 +203,9 @@ Event.create([{
     dress_code: "Casual",
     location: "Karen golf course",
     date: Date.new(2023, 7, 3),
-    time: Time.new(2023, 7, 3, 09, 0, 0),
+
+    time: Time.new(2023, 7, 3, 9, 0, 0),
+
     tickets: 100,
     price: 10
 },
