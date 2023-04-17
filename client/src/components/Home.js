@@ -19,7 +19,7 @@ function Home({ events, handleSearch, search }) {
                         <h1>An Event To Remember for Life!</h1>
                         <p>Less work, more play. <br/> Whether you're into online streams, <br/> Weekend festivals or daytime get-togethers <br/> We have something for you. </p>
                         <form action="" className="searchbar">
-                            <input type="search" className="form-control icon" required name="search" value={search} onChange={handleSearch} placeholder="Search event by category"></input>
+                            <input type="search" className="form-control icon" required name="search" value={search} onChange={handleSearch} placeholder="Search event by name"></input>
                         </form>
                     </div>
                 </div>
