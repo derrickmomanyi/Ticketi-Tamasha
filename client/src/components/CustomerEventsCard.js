@@ -38,8 +38,7 @@ function CustomerEventsCard( { event, onDeleteEvent, eventId } ){
         fetch(`/customer_events/${eventId}`, {
           method:'DELETE'
         })
-        onDeleteEvent(eventId)
-            
+        onDeleteEvent(eventId)            
       }
 
     return(
