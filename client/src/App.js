@@ -26,7 +26,8 @@ function App() {
     setSearch(e.target.value)
   }
 
-  const displayEvents = events.filter(event => event.category.toLowerCase().includes(search.toLowerCase()))
+  const displayEvents = events.filter(event => event.title.toLowerCase().includes(search.toLowerCase()))
+  
 
   return (
     <BrowserRouter>
