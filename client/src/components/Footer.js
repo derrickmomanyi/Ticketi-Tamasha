@@ -268,7 +268,7 @@ function Footer() {
 
         <div className="text-center p-4" style={{ color: '#008080' }}>
           © 2023 Copyright:
-          <a className="text-reset fw-bold" href="#">TIKITI TAMASHA</a>
+          <a className="text-reset fw-bold" href="tikititamsha.com">TIKITI TAMASHA</a>
         </div>
 
       </footer>
