@@ -61,8 +61,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
   end
 
   create_table "drafts", force: :cascade do |t|
+
+    t.string "title"
+    t.string "image"
+    t.string "category"
+    t.string "description"
+    t.string "hosted_by"
+    t.string "featuring"
+    t.string "dress_code"
+    t.string "location"
+    t.date "date"
+    t.time "time"
+    t.integer "tickets"
+    t.integer "price"
+    t.bigint "organizer_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["organizer_id"], name: "index_drafts_on_organizer_id"
+
   end
 
   create_table "events", force: :cascade do |t|
@@ -109,6 +125,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "customer_events", "customers"
   add_foreign_key "customer_events", "events"
+  add_foreign_key "drafts", "organizers"
   add_foreign_key "organizer_events", "events"
   add_foreign_key "organizer_events", "organizers"
 end
