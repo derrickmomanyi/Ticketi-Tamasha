@@ -57,28 +57,40 @@ function Navbar() {
                                             color: '#008080',
                                             textDecoration: 'underline'
                                         }
-                                        : { color: '#008080',textDecoration:'none' }
+                                        : { color: '#008080', textDecoration: 'none' }
                                 }
                             >Favourites</NavLink>
                         </li> : null}
 
 
-                        {user?.admin ? <li className="nav-item">
-                            <NavLink to="/drafts" 
-                               style={({ isActive }) =>
-                               isActive
-                                   ? {
-                                       color: '#008080',
-                                       textDecoration: 'underline'
-                                   }
-                                   : { color: '#008080',textDecoration:'none' }
-                           }
-                            >Drafts</NavLink>
+                        <div className="organizer-links">
+                        {user?.admin ? <li className="nav-item event-org">
+                            <NavLink to="/organizerevents"
+                                style={({ isActive }) =>
+                                    isActive
+                                        ? {
+                                            color: '#008080',
+                                            textDecoration: 'underline'
+                                        }
+                                        : { color: '#008080', textDecoration: 'none' }
+                                }
+                            >Events</NavLink>
+
                         </li> : ''}
 
-                        {user?.admin ? <li className="nav-item">
-                            <NavLink to="/addevent">Add Events</NavLink>
+                        {user?.admin ? <li className="nav-item create">
+                            <NavLink to="/addevent"
+                                style={({ isActive }) =>
+                                    isActive
+                                        ? {
+                                            color: '#008080',
+                                            textDecoration: 'underline'
+                                        }
+                                        : { color: '#008080', textDecoration: 'none' }
+                                }
+                            >Create</NavLink>
                         </li> : ''}
+                        </div>
 
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{ marginLeft: "700px", marginTop: "3px" }}>
 

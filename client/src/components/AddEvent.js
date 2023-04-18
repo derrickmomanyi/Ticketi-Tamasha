@@ -22,9 +22,11 @@ function AddEvent(){
 
     
     return(
+
         <>
         <AddEventForm onAddDrafts={ handleAddDrafts }/>
         </>
+
 
     )
 }
