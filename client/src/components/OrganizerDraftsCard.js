@@ -15,9 +15,15 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 =======
 import { NavLink } from 'react-router-dom'
 
+<<<<<<< HEAD
 function OrganizerDraftsCard({ draft, draftId, onDeleteDraft }) {
 >>>>>>> 770514e5 (icons styling)
 
+=======
+function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
+    const navigate = useNavigate();
+     
+>>>>>>> ab4f2449 (solving conflicts)
 
   const dates = new Date(draft.date);
   const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0, 3) // "WED"
