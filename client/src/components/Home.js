@@ -37,13 +37,8 @@ function Home({ events, handleSearch, search }) {
                         <option value="Motor show">Motor show</option>
                         <option value="Culture">Culture</option>
                         <option value="Theatre plays">Theatre plays</option>
-
-                        
-
-                        
                     </select>
                     </div>
-                    {/* <h5>Buy tickets in advance to popular events</h5> */}
                 </div>
                 <div className="row">
                     {events.map(event =>

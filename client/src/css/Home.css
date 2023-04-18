@@ -37,6 +37,7 @@
     color: #000000;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 800;
+    display: flex;
 
 }
 
@@ -75,5 +76,5 @@
 }
 
 .form-select{
-    width: 20%;
+    margin-left: 5%;
 }
