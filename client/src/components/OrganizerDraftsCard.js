@@ -1,8 +1,9 @@
 import React from "react";
 import { NavLink } from 'react-router-dom'
 
-function OrganizerDraftsCard({ draft, draftId, onDeleteDraft }) {
-
+function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
+    const navigate = useNavigate();
+     
 
   const dates = new Date(draft.date);
   const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0, 3) // "WED"
