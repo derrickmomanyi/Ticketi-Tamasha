@@ -9,6 +9,7 @@ import AddEvent from './components/AddEvent';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import EachEvent from './components/EachEvent';
+import EachDraft from './components/EachDraft';
 
 function App() {
 
@@ -37,9 +38,10 @@ function App() {
           <Route path='/' element={<Layout />}>
             <Route index element={<Home events={displayEvents} handleSearch={handleSearch} search={search} />} />
             <Route path="customers/:id/events" element={<CustomerEvents />} />
-            <Route path="drafts" element={<OrganizerDrafts />} />
+            <Route path="/organizers/:id/drafts" element={<OrganizerDrafts />} />
             <Route path="addevent" element={<AddEvent />} />
             <Route path="/events/:id" element = {<EachEvent />} />
+            <Route path="/drafts/:id" element = {<EachDraft />} />
           </Route>
 
           <Route path="login" element={<Login />} />
