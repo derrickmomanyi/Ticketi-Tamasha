@@ -27,7 +27,8 @@ function OrganizerDrafts(){
 
     if (!isLoaded) return <h2>Loading...</h2>
     return(
-        <div className="row">
+    
+        <div className="row" style={{marginLeft:"8%"}}>
          {drafts.map((draft) => 
         <OrganizerDraftsCard draft = {draft} key = {draft.id} draftId={ draft.id } onDeleteDraft={ onDeleteDraft }/>)}
         
