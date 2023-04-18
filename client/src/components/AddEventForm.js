@@ -38,16 +38,26 @@ function AddEventForm( { onAddDrafts }) {
         formData.append('organizer_id', user?.id) 
 
 
-    // const data = Object.fromEntries(formData)
-    // console.log(data);
-
-
     fetch("/drafts",{
         method: "POST",       
         body: formData
     })
     .then(res => res.json())
-    .then(drafts => onAddDrafts(drafts))
+    .then(drafts => {
+      onAddDrafts(drafts)
+      setTitle('')
+      setImage('')
+      setCategory('')
+      setDescription('')
+      setHostedBy('')
+      setFeaturing('')
+      setDressCode('')
+      setLocation('')
+      setDate('')
+      setTime('')
+      setTickets('')
+      setPrice('')
+    })
    
     
   };
