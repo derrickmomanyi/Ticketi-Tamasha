@@ -40,6 +40,11 @@ class OrganizersController < ApplicationController
         head :no_content
     end
 
+    def organizer_drafts
+      organizer = Organizer.find(params[:id])
+      render json: organizer.drafts
+    end
+
     private
   
     def organizer_params
