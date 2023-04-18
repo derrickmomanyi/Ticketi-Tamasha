@@ -46,6 +46,7 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 
     return(
         <>
+
       <div className="card " style={{ width: '18rem' }}>
         <NavLink to={`/drafts/${draft.id}`}>
           <img src={draft.image_url} className="card-img-top" alt={draft.title} />
@@ -64,6 +65,7 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
           <div className="title-like">
             <h5 className="card-title">{truncate(draft.title, 20)}</h5>
             <div className="event-like">
+
 
             </div>
           </div>
