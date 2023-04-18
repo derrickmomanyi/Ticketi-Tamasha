@@ -38,7 +38,7 @@ class DraftsController < ApplicationController
     end
 
     def draft_params
-        params.require(:drafts).permit(:title, :image, :category, :description, :hosted_by, :featuring, :dress_code, :location, :date, :time ,:tickets, :price, :organizer_id)
+        params.permit(:title, :image, :category, :description, :hosted_by, :featuring, :dress_code, :location, :date, :time ,:tickets, :price, :organizer_id)
     end
 
     def render_not_found_response
