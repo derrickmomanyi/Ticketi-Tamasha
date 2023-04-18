@@ -30,7 +30,7 @@ function Home({ events, handleSearch, search }) {
                     <h2 >Events in Kenya</h2>
                     
                     <div className="event-dropdown">
-                    <select value={search} onChange={handleSearch} class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <select value={search} onChange={handleSearch} className="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                         <option value="">Choose a category</option>
                         <option value="Music">Music</option>
                         <option value="Sports">Sports</option>
