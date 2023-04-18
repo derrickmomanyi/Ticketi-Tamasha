@@ -63,7 +63,7 @@ function AddEvent({events}){
                 <form onSubmit={handleSubmit}>
                     <div className="card-addevent">
                     <h3>Create an Event</h3>
-                    <input className="form-control"
+                    <input className="form-control form-control-lg"
                         type="text" 
                         placeholder="Title" 
                         name="Title" 
@@ -72,7 +72,7 @@ function AddEvent({events}){
                         required/>
                         <br/>
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="image"
                         name="image" 
@@ -82,7 +82,7 @@ function AddEvent({events}){
                         <br/> 
 
                         <div>
-                        <select value={category} onChange={e => setCategory(e.target.value)} className="form-control">
+                        <select value={category} onChange={e => setCategory(e.target.value)} className="form-control form-control-lg">
                             <option value="">Choose a category</option>
                             <option value="Music">Music</option>
                             <option value="Sports">Sports</option>
@@ -94,7 +94,7 @@ function AddEvent({events}){
                         <br/>
 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Hosted_by"
                         name="Hosted_by"  
@@ -103,7 +103,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Featuring"
                         name="featuring"  
@@ -112,7 +112,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Dress_code"
                         name="Dress_code"  
@@ -121,7 +121,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Loaction"
                         name="Loaction"  
@@ -130,7 +130,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="Date"
                         placeholder="Date"
                         name="Date"  
@@ -139,7 +139,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="time"
                         placeholder="Time"
                         name="Time"  
@@ -148,7 +148,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="tickets"
                         name="tickets"  
@@ -157,7 +157,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Price"
                         name="Price"  
@@ -166,7 +166,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <textarea className="form-control"
+                        <textarea className="form-control form-control-lg"
                         type="text"
                         placeholder="Description"
                         name="Description"  
@@ -175,7 +175,7 @@ function AddEvent({events}){
                         required/>
                         <br/> 
 
-                        <button className="btn sign btn-primary" type="submit">Create Event</button>
+                        <button className="btn login btn-primary btn-lg" type="submit">Create Event</button>
                     </div>
                     
                 </form>
