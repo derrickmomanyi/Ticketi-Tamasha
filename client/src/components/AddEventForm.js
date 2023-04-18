@@ -38,8 +38,8 @@ function AddEventForm( { onAddDrafts }) {
         formData.append('organizer_id', user?.id) 
 
 
-    const data = Object.fromEntries(formData)
-    console.log(data);
+    // const data = Object.fromEntries(formData)
+    // console.log(data);
 
 
     fetch("/drafts",{
