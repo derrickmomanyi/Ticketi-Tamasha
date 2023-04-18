@@ -23,7 +23,7 @@ function AddEventForm( { onAddDrafts }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData();
-        formData.append("title", title);        
+       formData.append("title", title);        
         formData.append("category", category);
         formData.append("hosted_by", hostedBy);
         formData.append("featuring", featuring);
@@ -35,7 +35,7 @@ function AddEventForm( { onAddDrafts }) {
         formData.append("price", price);
         formData.append("description", description);
         formData.append("image", image);
-        formData.append('organizer_id', user?.id)
+        formData.append('organizer_id', user?.id) 
 
 
     const data = Object.fromEntries(formData)
@@ -43,10 +43,7 @@ function AddEventForm( { onAddDrafts }) {
 
 
     fetch("/drafts",{
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        method: "POST",       
         body: formData
     })
     .then(res => res.json())
@@ -57,7 +54,7 @@ function AddEventForm( { onAddDrafts }) {
 
   return (
     <div className="add-Event">
-      {user?.admin ? (
+     (
          <form onSubmit={handleSubmit}>
                     <div className="card-addevent">
                     <h3>Create an Event</h3>
@@ -72,6 +69,8 @@ function AddEventForm( { onAddDrafts }) {
 
                         <input className="form-control form-control-lg"                                                                           
                         type="file"
+                        name='image'
+                        placeholder="Image"
                         onChange={(e) => setImage(e.target.files[0])}               
                         required/>
                         <br/> 
@@ -173,9 +172,7 @@ function AddEventForm( { onAddDrafts }) {
                     </div>
                     
                 </form>
-      ) : (
-        <h3 style={{ marginLeft: "35%" }}>Login to add an event</h3>
-      )}
+      ) 
     </div>
   );
 }

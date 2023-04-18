@@ -5,8 +5,8 @@ class DraftsController < ApplicationController
     skip_before_action :authorized_user, :admin_user #allows non admins to access index and show
     wrap_parameters format: []
 
-    def index
-        render json: Draft.all, status: :ok
+    def index        
+        render json: Draft.all, status: :ok        
     end
 
     def show
@@ -19,6 +19,7 @@ class DraftsController < ApplicationController
         render json: draft, status: :created
     end
 
+   
     def update
         draft = find_draft
         draft.update!(draft_params)
