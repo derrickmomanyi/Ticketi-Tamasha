@@ -9,19 +9,21 @@ import AddEvent from './components/AddEvent';
 import Layout from './components/Layout';
 import Home from './components/Home';
 import EachEvent from './components/EachEvent';
-import EachDraft from './components/EachDraft';
 import EditDraft from './components/EditDraft';
 
 function App() {
 
   const [events, setEvents] = useState([])
   const [search, setSearch] = useState("")
+ 
 
   useEffect(() => {
     fetch('/events')
       .then((res) => res.json())
       .then((data) => setEvents(data))
   }, [])
+
+
 
 
   function handleSearch(e) {
@@ -41,9 +43,8 @@ function App() {
             <Route path="customers/:id/events" element={<CustomerEvents />} />
             <Route path="/organizers/:id/drafts" element={<OrganizerDrafts />} />
             <Route path="addevent" element={<AddEvent />} />
-            <Route path="/events/:id" element = {<EachEvent />} />
-            <Route path="/drafts/:id" element = {<EachDraft />} />
-            <Route path="/editdraft" element = {<EditDraft />} />
+            <Route path="/events/:id" element = {<EachEvent />} />           
+            <Route path="/drafts/:id" element = {<EditDraft />} />
           </Route>
 
           <Route path="login" element={<Login />} />
