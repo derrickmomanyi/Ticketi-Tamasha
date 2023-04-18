@@ -12,8 +12,10 @@ function EventCard({ event, user }) {
 
 
       const likedEvent = {
-    customer_id: user ? user.id : 1, event_id: event.id
+        customer_id: user ? user.id : 1, event_id: event.id
       }
+
+      
 
       function handleAddEvent() {
         fetch('/customer_events', {
@@ -31,13 +33,15 @@ function EventCard({ event, user }) {
 
       user && !user?.admin ? selectedEventId = user.customer_events.map(customerEvent => customerEvent.event).map(customerEvent => customerEvent.id) : selectedEventId = []
 
-
+    
 
     const dates = new Date(date);
     const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0,3) // "WED"
     const day = dates.toLocaleString("default", { day: "numeric" })// "15"
     const monthInWords = dates.toLocaleString("default", { month: "long" }).slice(0,3) // "APR"
     
+  
+    // console.log(location.slice(0, 2)); //0 inakuanga index  number ya pili the number of characters you want to get
 
     function getOrdinalSuffix(day) {
         const j = day % 10, k = day % 100;
