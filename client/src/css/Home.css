@@ -59,7 +59,7 @@ font-weight: 800;
   }
 
 .icon{
-    padding-left: 25px;
+    padding-left: 35px;
     background: url("https://static.thenounproject.com/png/101791-200.png") no-repeat left;
     background-size: 22px;
     background-color: #ffffff;
@@ -71,5 +71,3 @@ font-weight: 800;
     /* margin-left: 10px; */
     /* changes home page size */
   }
-
-

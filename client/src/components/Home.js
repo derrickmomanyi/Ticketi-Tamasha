@@ -16,10 +16,10 @@ function Home({ events, handleSearch, search }) {
             <div className="home row" id="home">
                 <div className="transbox">
                     <div className="text-home">
-                        <h1>An Event To Remember for Life!</h1>
+                        { user ? <h3 style={{color:"white"}}>{"Hey, "  +  user.username.charAt(0).toUpperCase() + user.username.slice(1)}</h3 > : ""}
                         <p>Less work, more play. <br/> Whether you're into online streams, <br/> Weekend festivals or daytime get-togethers <br/> We have something for you. </p>
                         <form action="" className="searchbar">
-                            <input type="search" className="form-control icon" required name="search" value={search} onChange={handleSearch} placeholder="Search event by category"></input>
+                            <input type="search" className="form-control icon" required name="search" value={search} onChange={handleSearch} placeholder="Search by name or category"></input>
                         </form>
                     </div>
                 </div>
@@ -28,6 +28,21 @@ function Home({ events, handleSearch, search }) {
             <div className="events-body">
                 <div className="card-heading col-md-12">
                     <h2 >Events in Kenya</h2>
+                    
+                    <div className="event-dropdown">
+                    <select value={search} onChange={handleSearch}>
+                        <option value="">Choose a category</option>
+                        <option value="Music">Music</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Motor show">Motor show</option>
+                        <option value="Culture">Culture</option>
+                        <option value="Theatre plays">Theatre plays</option>
+
+                        
+
+                        
+                    </select>
+                    </div>
                     {/* <h5>Buy tickets in advance to popular events</h5> */}
                 </div>
                 <div className="row">

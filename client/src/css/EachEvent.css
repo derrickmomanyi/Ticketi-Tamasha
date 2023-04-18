@@ -1,7 +1,8 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 .event-body{
-    width: 80%;  
-   margin-left: 200px;
+    width: 84%;  
+   margin-left: 150px;
    margin-top: 10px;
    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.8), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
    transition: 500ms; 
@@ -14,7 +15,7 @@
 
 .event-title{
     border-bottom: 1px solid rgb(68, 65, 65);    
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Oswald', sans-serif;
     margin-left: 15px;
     display: flex;
     justify-content: space-between;
@@ -39,8 +40,6 @@
 
 .date{
     background-color: red;
-    margin-top: 20px;
-    margin-left: 60px;
     height: 9.7vh;
     width: 15vh;   
     font-size: 18px;    
@@ -49,18 +48,6 @@
 span{    
     margin-left: 25px;         
 }
-
-.event-details{
-    margin-left: 30px;
-    margin-top: 20px;   
-    display: flex;     
-   
-}
-
-.event-details-body{
-    display: flex;    
-}
-
 
 .event-details label{
     display:block;
@@ -75,11 +62,6 @@ span{
    font-weight: 380;
 }
 
-.event-description{
-    /* margin-left: 750px;
-    margin-top: 100px; */
-    transform: translate(37%, -1600%)
-}
 
 .event-highlight{
     background-color: rgb(226, 226, 226);
@@ -142,4 +124,27 @@ span{
     margin-bottom: 100px;
     background-color: rgb(226, 226, 226);
 }
-
+.all-details{
+    display: flex;
+}
+.details-img{
+    width: 40%;
+    max-width: 40%;
+}
+.event-details{
+    width: 60%;
+}
+.event-div{
+    padding-top: 2%;
+    display: flex;
+}
+.rtl{
+    margin-left: 30px  
+}
+.hfd{
+    margin-left: 30px
+}
+.event-description{
+    padding-top: 2%;
+    font-family: 'Noto Serif', serif;
+}

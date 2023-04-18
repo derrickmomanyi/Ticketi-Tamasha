@@ -13,7 +13,6 @@ class CreateEvents < ActiveRecord::Migration[7.0]
       t.time :time 
       t.integer :tickets
       t.integer :price
-
       t.timestamps
     end
   end

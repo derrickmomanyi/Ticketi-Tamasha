@@ -8,9 +8,9 @@ function EventTable( {price, endTimeFormatted, totalTicketsAvailable} ){
     const [VIPTicket, setVIPTicket] = useState(0);
     const [errorMessage, setErrorMessage] = useState("");
 
-    const earlyBirdPrice = price;
-    const advancePrice = price * 2;
-    const VIPPrice = price * 4;
+    const earlyBirdPrice = price * 100;
+    const advancePrice = price * 200;
+    const VIPPrice = price * 400;
 
 
     const earlyBirdSubtotal = earlyBirdTicket * earlyBirdPrice;
@@ -111,7 +111,7 @@ function EventTable( {price, endTimeFormatted, totalTicketsAvailable} ){
                         <td>Kshs {VIPSubtotal.toFixed(2)}</td>
                     </tr>
                     <tr className="trow-total">
-                        <td></td>
+                        <td>{totalTicketsAvailable - earlyBirdTicket - advanceTicket - VIPTicket} tickets available</td>
                         <td></td>
                         <td>TOTAL TICKETS<br/>{totalTickets} Tickets</td>                        
                         <td>Kshs {totalPrice.toFixed(2)}</td>
