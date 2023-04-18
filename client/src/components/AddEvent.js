@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState} from "react";
 import '../css/AddEvent.css';
 import AddEventForm from "./AddEventForm";
@@ -24,6 +25,7 @@ function AddEvent(){
         <>
         <AddEventForm onAddDrafts={ handleAddDrafts }/>
         </>
+
     )
 }
 export default AddEvent;
