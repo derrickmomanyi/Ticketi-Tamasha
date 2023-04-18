@@ -103,6 +103,7 @@ span{
 .payment-details{
     background-color: rgb(226, 226, 226);
     margin-top: -15px;
+    height: 30vh;
     
 }
 
@@ -113,7 +114,6 @@ span{
 }
 .pay{
     margin-left: 35%;
-    background-color: rgb(204, 84, 84);
 }
 
 .pay:hover{

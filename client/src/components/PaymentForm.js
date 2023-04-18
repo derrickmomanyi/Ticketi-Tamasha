@@ -31,10 +31,10 @@ function PaymentForm(){
                         type="number"
                         placeholder="Phone Number"
                         name="number"                   
-                        required/>
+                        required/><br/>
                                           
     
-                        <button className="btn pay" type="submit">Proceed To Pay</button>
+                        <button className="btn btn-danger pay" type="submit">Proceed To Pay</button>
                         </div>                    
            
                     </form>
