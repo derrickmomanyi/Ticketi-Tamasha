@@ -61,7 +61,7 @@ function AddEventForm( { onAddDrafts }) {
          <form onSubmit={handleSubmit}>
                     <div className="card-addevent">
                     <h3>Create an Event</h3>
-                    <input className="form-control"
+                    <input className="form-control form-control-lg"
                         type="text" 
                         placeholder="Title" 
                         name="title" 
@@ -70,14 +70,14 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/>
 
-                        <input className="form-control"                                                                           
+                        <input className="form-control form-control-lg"                                                                           
                         type="file"
                         onChange={(e) => setImage(e.target.files[0])}               
                         required/>
                         <br/> 
 
                         <div>
-                        <select value={category} onChange={(e) => setCategory(e.target.value)} className="form-control" name='category'>
+                        <select value={category} onChange={(e) => setCategory(e.target.value)} className="form-control form-control-lg" name='category'>
                             <option value="">Choose a category</option>
                             <option value="Music">Music</option>
                             <option value="Sports">Sports</option>
@@ -89,7 +89,7 @@ function AddEventForm( { onAddDrafts }) {
                         <br/>
 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Hosted by?"
                         name="hosted_by"  
@@ -98,7 +98,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Featuring"
                         name="featuring"  
@@ -107,7 +107,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Dress code"
                         name="dress_code"
@@ -116,7 +116,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="text"
                         placeholder="Location"
                         name="location"  
@@ -125,7 +125,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="date"
                         placeholder="Date"
                         name="date"  
@@ -134,7 +134,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="time"
                         placeholder="Time"
                         name="time"  
@@ -143,7 +143,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="number"
                         placeholder="Tickets"
                         name="tickets" 
@@ -152,7 +152,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <input className="form-control"
+                        <input className="form-control form-control-lg"
                         type="number"
                         placeholder="Price"
                         name="price" 
@@ -161,7 +161,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <textarea className="form-control"
+                        <textarea className="form-control form-control-lg"
                         type="text"
                         placeholder="Description"                        
                         value={description}                          
@@ -169,7 +169,7 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <button className="btn sign btn-primary" type="submit">Create Event</button>
+                        <button className="btn login btn-primary btn-lg" type="submit">Create Event</button>
                     </div>
                     
                 </form>
