@@ -65,7 +65,7 @@ function Navbar() {
 
                         <div className="organizer-links">
                         {user?.admin ? <li className="nav-item event-org">
-                            <NavLink to="/organizerevents"
+                            <NavLink to="/drafts"
                                 style={({ isActive }) =>
                                     isActive
                                         ? {
@@ -74,7 +74,7 @@ function Navbar() {
                                         }
                                         : { color: '#008080', textDecoration: 'none' }
                                 }
-                            >Events</NavLink>
+                            >Drafts</NavLink>
 
                         </li> : ''}
 

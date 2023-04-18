@@ -51,7 +51,7 @@ function AddEventForm( { onAddDrafts }) {
     })
     .then(res => res.json())
     .then(drafts => onAddDrafts(drafts))
-    .catch((error) => console.error(error))
+   
     
   };
 
