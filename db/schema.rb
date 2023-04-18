@@ -61,7 +61,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
   end
 
   create_table "drafts", force: :cascade do |t|
-
     t.string "title"
     t.string "image"
     t.string "category"
@@ -78,7 +77,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["organizer_id"], name: "index_drafts_on_organizer_id"
-
   end
 
   create_table "events", force: :cascade do |t|

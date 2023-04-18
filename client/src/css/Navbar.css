@@ -6,3 +6,16 @@
     font-size: 25px;
     color: aqua;
 }
+.organizer-links{
+    display: flex;
+}
+.create{
+    transform: translate(450px, 15px);
+    font-size: 25px;
+
+}
+.event-org{
+    transform: translate(250px, 15px);
+    font-size: 25px;
+
+}
