@@ -10,6 +10,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import EachEvent from './components/EachEvent';
 import EachDraft from './components/EachDraft';
+import EditDraft from './components/EditDraft';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
             <Route path="addevent" element={<AddEvent />} />
             <Route path="/events/:id" element = {<EachEvent />} />
             <Route path="/drafts/:id" element = {<EachDraft />} />
+            <Route path="/editdraft" element = {<EditDraft />} />
           </Route>
 
           <Route path="login" element={<Login />} />
