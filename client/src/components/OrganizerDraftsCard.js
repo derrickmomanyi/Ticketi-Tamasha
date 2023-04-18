@@ -1,9 +1,6 @@
-
 import React from "react";
-import { NavLink} from 'react-router-dom'
-import { useNavigate} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import EditDraft from "./EditDraft";
+
 
 function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
     const navigate = useNavigate();
