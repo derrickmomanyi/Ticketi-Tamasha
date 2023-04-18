@@ -62,6 +62,7 @@ function Navbar() {
                             >Favourites</NavLink>
                         </li> : null}
 
+
                         <div className="organizer-links">
                         {user?.admin ? <li className="nav-item event-org">
                             <NavLink to="/organizerevents"
@@ -74,6 +75,7 @@ function Navbar() {
                                         : { color: '#008080', textDecoration: 'none' }
                                 }
                             >Events</NavLink>
+
                         </li> : ''}
 
                         {user?.admin ? <li className="nav-item create">
