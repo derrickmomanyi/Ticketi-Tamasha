@@ -82,7 +82,7 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 import React from "react";
 <<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
-import EditDraft from "./EditDraft";
+
 
 
 =======

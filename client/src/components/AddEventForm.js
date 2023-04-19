@@ -189,6 +189,7 @@ function AddEventForm({ onAddDrafts }) {
   const [title, setTitle] = useState("");
   const navigate = useNavigate();
 
+<<<<<<< HEAD
 
   const [image, setImage] = useState("")
   const [category, setCategory] = useState("")
@@ -202,6 +203,8 @@ function AddEventForm({ onAddDrafts }) {
   const [tickets, setTickets] = useState("")
   const [price, setPrice] = useState("")
 
+=======
+>>>>>>> 5716a4a (Prefilled form)
 
 
 
