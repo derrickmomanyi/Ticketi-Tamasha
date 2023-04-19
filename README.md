@@ -6,7 +6,7 @@ This is an e-ticketing app that allows a user to view all current and upcoming e
 ----
 
 ## Demo
-![Demo](/public/images/Tikiti%20Tamasha%20-%20Google%20Chrome%202023-04-19%2016-26-37.gif)
+![Demo](/public/images/T-Tamasha.gif)
 
 ## Technologies used
   * Javascript
