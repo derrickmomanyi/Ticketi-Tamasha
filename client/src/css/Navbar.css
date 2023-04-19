@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .home-icon{
     margin-left: 40%;
 }
@@ -21,6 +22,8 @@
 
 }
 =======
+=======
+>>>>>>> f982d38 (patched)
 .home-icon{
     margin-left: 40%;
     font-size: 25px;
@@ -44,4 +47,30 @@
     font-size: 25px;
 
 }
+<<<<<<< HEAD
 >>>>>>> b7656b8 (navbar uniformity)
+=======
+=======
+.home-icon{
+    margin-left: 40%;
+}
+.links{
+    transform: translate(300px, 15px);
+    font-size: 25px;
+    color: aqua;
+}
+.organizer-links{
+    display: flex;
+}
+.create{
+    transform: translate(450px, 15px);
+    font-size: 25px;
+
+}
+.event-org{
+    transform: translate(250px, 15px);
+    font-size: 25px;
+
+}
+>>>>>>> 3b8d702 (capstone project and gem)
+>>>>>>> f982d38 (patched)
