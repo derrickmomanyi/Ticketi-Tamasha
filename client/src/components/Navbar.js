@@ -65,7 +65,7 @@ function Navbar() {
 
                         <div className="organizer-links">
                         {user?.admin ? <li className="nav-item event-org">
-                            <NavLink to="/drafts"
+                            <NavLink to={`/organizers/${user.id}/drafts`}
                                 style={({ isActive }) =>
                                     isActive
                                         ? {

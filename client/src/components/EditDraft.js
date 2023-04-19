@@ -1,87 +1,111 @@
-import React, { useState, useContext } from "react";
+import React, {useState, useEffect, useContext} from "react";
+import { useParams } from 'react-router-dom'
 import { UserContext } from "../context/user";
 import { useNavigate } from 'react-router-dom';
 
-function AddEventForm( { onAddDrafts }) {
-  const { user } = useContext(UserContext);
-  const [title, setTitle] = useState("");
-  const navigate = useNavigate();
 
 
-     const [image, setImage] = useState("")
-    const [category, setCategory] = useState("")
-    const [description, setDescription] = useState("")
-    const [hostedBy, setHostedBy] = useState("")
-    const [featuring, setFeaturing] = useState("")
-    const [dressCode, setDressCode] =useState("")
-    const [location, setLocation] = useState("")
-    const [date, setDate] = useState("")
-    const [time, setTime] = useState("")
-    const [tickets, setTickets] = useState("")
-    const [price, setPrice] = useState("")
+    function EditDraft(){
+        const { user } = useContext(UserContext);
+        const { id } = useParams();
+        const navigate = useNavigate();
+        const [draft , setDraft] = useState({
+            title: '',
+            category: '',
+            hostedBy: '',
+            featuring: '',
+            dressCode: '',
+            date: '',
+            time: '',
+            price: '',
+            description: '',
+            location: '',
+            tickets: '',
+           
+        })
+        
+        useEffect(()=> {
+            fetch(`/drafts/${id}`)
+            .then((res) => res.json())
+            .then((data) => setDraft(data))
 
+        }, [id])
+
+        const [title, setTitle] = useState( '')
+        const [category, setCategory] = useState( '');
+        const [hostedBy, setHostedBy] = useState('');
+        const [featuring, setFeaturing] = useState( '');
+        const [dressCode, setDressCode] = useState( '');
+        const [description, setDescription] = useState('')
+        const [location, setLocation] = useState('')
+        const [date, setDate] = useState("")
+        const [time, setTime] = useState( '' )
+        const [tickets, setTickets] = useState( '' )
+        const [price, setPrice] = useState( '')
+        const [image, setImage] = useState("")
+     
     
-    
+        useEffect(() => {
+            setTitle(draft.title);
+            setCategory(draft.category);
+            setHostedBy(draft.hosted_by);
+            setFeaturing(draft.featuring);
+            setDressCode(draft.dress_code);
+            setDescription(draft.description)
+            setLocation(draft.location)
+            setTickets(draft.tickets)
+            setPrice(draft.price)
+            setTime(draft.time)
+            
+        }, [draft]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-       formData.append("title", title);        
-        formData.append("category", category);
-        formData.append("hosted_by", hostedBy);
-        formData.append("featuring", featuring);
-        formData.append("dress_code", dressCode);
-        formData.append("location", location);
-        formData.append("date", date);
-        formData.append("time", time);
-        formData.append("tickets", tickets);
-        formData.append("price", price);
-        formData.append("description", description);
-        formData.append("image", image);
-        formData.append('organizer_id', user?.id) 
+         
+
+        function handleSubmit(e){
+            e.preventDefault()
+            const formData = new FormData();
+            formData.append("title", title);        
+             formData.append("category", category);
+             formData.append("hosted_by", hostedBy);
+             formData.append("featuring", featuring);
+             formData.append("dress_code", dressCode);
+             formData.append("location", location);
+             formData.append("date", date);
+             formData.append("time", time);
+             formData.append("tickets", tickets);
+             formData.append("price", price);
+             formData.append("description", description);
+             formData.append("image", image);
+             formData.append('organizer_id', user?.id) 
 
 
-    fetch("/drafts",{
-        method: "POST",       
-        body: formData
-    })
-    .then(res => res.json())
-    .then(drafts => {
-      onAddDrafts(drafts)
-      setTitle('')
-      setImage('')
-      setCategory('')
-      setDescription('')
-      setHostedBy('')
-      setFeaturing('')
-      setDressCode('')
-      setLocation('')
-      setDate('')
-      setTime('')
-      setTickets('')
-      setPrice('')
-      navigate(`/organizers/${user?.id}/drafts`)
-    })
-   
-    
-  };
+             fetch(`/drafts/${id}`,{
+                method: "PATCH",       
+                body: formData
+            })
+            .then(res => res.json())
+            navigate(`/organizers/${user?.id}/drafts`)
+        }
 
-  return (
-    <div className="add-Event">
-     (
-         <form onSubmit={handleSubmit}>
-                    <div className="card-addevent">
-                    <h3>Create an Event</h3>
-                    <input className="form-control form-control-lg"
-                        type="text" 
-                        placeholder="Title" 
-                        name="title" 
-                        value={title}                           
-                        onChange={(e) => setTitle(e.target.value)}                 
-                        required/>
-                        <br/>
+       
+       
+        
 
-                        <input className="form-control form-control-lg"                                                                           
+        return(
+            <>
+            <form onSubmit = {handleSubmit}>
+                        <div className="card-addevent">
+                        <h3>Edit an Event</h3>
+                        <input className="form-control form-control-lg"
+                            type="text" 
+                            placeholder="Title" 
+                            name="title" 
+                            value={title}                           
+                            onChange={(e) => setTitle(e.target.value)}                 
+                            required/>
+                            <br/>
+
+                            <input className="form-control form-control-lg"                                                                           
                         type="file"
                         name='image'
                         placeholder="Image"
@@ -182,13 +206,10 @@ function AddEventForm( { onAddDrafts }) {
                         required/>
                         <br/> 
 
-                        <button className="btn login btn-primary btn-lg" type="submit">Create Event</button>
-                    </div>
-                    
-                </form>
-      ) 
-    </div>
-  );
-}
-
-export default AddEventForm;
+                         <button className="btn login btn-primary btn-lg" type="submit">Update Event</button>
+                        </div>
+                    </form>      
+            </>
+        )
+    }
+export default EditDraft;

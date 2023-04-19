@@ -14,7 +14,7 @@ function AddEvent(){
              .then((data) => setDrafts(data))
          }, [])
    
-        console.log(drafts);   
+       
       const handleAddDrafts = (newDraft) =>{
         const updatedDraft = [...drafts, newDraft]
         setDrafts(updatedDraft)  
