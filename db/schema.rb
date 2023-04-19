@@ -81,7 +81,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.string "image"
     t.string "category"
     t.string "description"
     t.string "hosted_by"
@@ -94,6 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
     t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "organizer_events", force: :cascade do |t|
