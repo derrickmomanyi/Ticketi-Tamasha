@@ -1,10 +1,17 @@
+<<<<<<< HEAD
 import React, {useState, useEffect, useContext} from "react";
 import { useParams } from 'react-router-dom'
 import { UserContext } from "../context/user";
 import { useNavigate } from 'react-router-dom';
+=======
+import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom'
+import EditDraftForm from "./EditDraftForm";
+>>>>>>> 9515f33 (Added Edit Draft Form)
 
 
 
+<<<<<<< HEAD
     function EditDraft(){
         const { user } = useContext(UserContext);
         const { id } = useParams();
@@ -212,4 +219,26 @@ import { useNavigate } from 'react-router-dom';
             </>
         )
     }
+=======
+    const { id } = useParams();
+
+    const [drafts, setDrafts] = useState([])
+    useEffect(() => {
+        fetch(`/drafts/${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+            setDrafts(data)            
+        })
+    }, [])
+   
+    
+   
+
+    return(
+        <>
+        <EditDraftForm drafts={ drafts }/>      
+        </>
+    )
+}
+>>>>>>> 9515f33 (Added Edit Draft Form)
 export default EditDraft;
