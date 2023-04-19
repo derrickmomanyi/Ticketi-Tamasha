@@ -1,9 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useContext} from "react";
 import { useParams } from 'react-router-dom'
+import { UserContext } from "../context/user";
+import { useNavigate } from 'react-router-dom';
+
 
 
     function EditDraft(){
+        const { user } = useContext(UserContext);
         const { id } = useParams();
+        const navigate = useNavigate();
         const [draft , setDraft] = useState({
             title: '',
             category: '',
@@ -51,14 +56,40 @@ import { useParams } from 'react-router-dom'
             setTickets(draft.tickets)
             setPrice(draft.price)
             setTime(draft.time)
+            
         }, [draft]);
 
-        console.log(image);   
+         
 
         function handleSubmit(e){
             e.preventDefault()
-            
+            const formData = new FormData();
+            formData.append("title", title);        
+             formData.append("category", category);
+             formData.append("hosted_by", hostedBy);
+             formData.append("featuring", featuring);
+             formData.append("dress_code", dressCode);
+             formData.append("location", location);
+             formData.append("date", date);
+             formData.append("time", time);
+             formData.append("tickets", tickets);
+             formData.append("price", price);
+             formData.append("description", description);
+             formData.append("image", image);
+             formData.append('organizer_id', user?.id) 
+
+
+             fetch(`/drafts/${id}`,{
+                method: "PATCH",       
+                body: formData
+            })
+            .then(res => res.json())
+            navigate(`/organizers/${user?.id}/drafts`)
         }
+
+       
+       
+        
 
         return(
             <>
@@ -175,7 +206,7 @@ import { useParams } from 'react-router-dom'
                         required/>
                         <br/> 
 
-                         <button className="btn login btn-primary btn-lg" type="submit">Create Event</button>
+                         <button className="btn login btn-primary btn-lg" type="submit">Update Event</button>
                         </div>
                     </form>      
             </>
