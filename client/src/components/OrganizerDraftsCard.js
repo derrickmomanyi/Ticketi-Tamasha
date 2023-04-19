@@ -1,7 +1,7 @@
 
 import React from "react";
 import { useNavigate } from 'react-router-dom';
-import EditDraft from "./EditDraft";
+
 
 
 function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
