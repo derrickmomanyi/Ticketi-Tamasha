@@ -8,6 +8,7 @@ function AddEventForm({ onAddDrafts }) {
   const navigate = useNavigate();
 
 
+
   const [image, setImage] = useState("")
   const [category, setCategory] = useState("")
   const [description, setDescription] = useState("")
@@ -19,6 +20,7 @@ function AddEventForm({ onAddDrafts }) {
   const [time, setTime] = useState("")
   const [tickets, setTickets] = useState("")
   const [price, setPrice] = useState("")
+
 
 
 
