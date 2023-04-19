@@ -323,7 +323,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/happiness/.rbenv/versions/2.7.4/openssl/include -I/home/happiness/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/happiness/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/happiness/.rbenv/versions/2.7.4/lib -L/home/happiness/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/happiness/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/happiness/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lssl -lcrypto  -Wl,-rpath,/home/happiness/.rbenv/versions/2.7.4/lib -L/home/happiness/.rbenv/versions/2.7.4/lib -lruby -lssl -lcrypto  -lm   -lc"
-/usr/bin/ld: /tmp/ccJ3AipK.o: in function `t':
+/usr/bin/ld: /tmp/cc2EOCj9.o: in function `t':
 /home/happiness/moringa/project/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/puma-5.6.5/ext/puma_http11/conftest.c:17: undefined reference to `SSL_get1_peer_certificate'
 collect2: error: ld returned 1 exit status
 checked program was:

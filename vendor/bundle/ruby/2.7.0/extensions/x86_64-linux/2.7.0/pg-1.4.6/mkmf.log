@@ -348,7 +348,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/happiness/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/postgresql -I/home/happiness/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/happiness/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/happiness/.rbenv/versions/2.7.4/lib -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu -L. -L/home/happiness/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lpq  -Wl,-rpath,/home/happiness/.rbenv/versions/2.7.4/lib -L/home/happiness/.rbenv/versions/2.7.4/lib -lruby -lpq  -lm   -lc"
-/usr/bin/ld: /tmp/ccq4KSzQ.o: in function `t':
+/usr/bin/ld: /tmp/ccUnBdPs.o: in function `t':
 /home/happiness/moringa/project/Ticketi-Tamasha/vendor/bundle/ruby/2.7.0/gems/pg-1.4.6/ext/conftest.c:15: undefined reference to `rb_io_wait'
 collect2: error: ld returned 1 exit status
 checked program was:
