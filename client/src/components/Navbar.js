@@ -46,7 +46,7 @@ function Navbar() {
                                         }
                                         : { color: '#008080', textDecoration: 'none' }
                                 }
-                            >Home
+                            >HOME
                                 {/* <svg xmlns="http://www.w3.org/2000/svg"
                                 width="46"
                                 height="56"
@@ -69,7 +69,7 @@ function Navbar() {
                                         }
                                         : { color: '#008080', textDecoration: 'none' }
                                 }
-                            >Favourites</NavLink>
+                            >FAVOURITES</NavLink>
                         </li> : null}
 
 
@@ -84,7 +84,7 @@ function Navbar() {
                                             }
                                             : { color: '#008080', textDecoration: 'none' }
                                     }
-                                >Drafts</NavLink>
+                                >DRAFTS</NavLink>
 
                             </li> : ''}
 
@@ -98,22 +98,22 @@ function Navbar() {
                                             }
                                             : { color: '#008080', textDecoration: 'none' }
                                     }
-                                >Create</NavLink>
+                                >CREATE</NavLink>
                             </li> : ''}
                         </div>
 
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{ marginLeft: "700px", marginTop: "3px" }}>
 
 
-                            {user ? <NavLink to='/logout' onClick={handleClickLogout} ><button className="btn btn-outline-success" type="button" style={{ fontSize: "23px", marginLeft: "18px" }}>Logout</button></NavLink>
-                                : <NavLink to='/login'  ><button className="btn btn-outline-success me-md-2" type="button" style={{ fontSize: "23px" }}>Login</button></NavLink>
+                            {user ? <NavLink to='/logout' onClick={handleClickLogout} ><button className="btn btn-outline-success btn-sm" type="button" style={{ fontSize: "23px"}}>Logout</button></NavLink>
+                                : <NavLink to='/login'  ><button className="btn btn-outline-success btn-sm me-md-2" type="button" style={{ fontSize: "23px" }}>Login</button></NavLink>
 
                             }
 
                             {user ? null :
                                 <NavLink to='/signup'>
 
-                                    <button className="btn btn-outline-success" type="button" style={{ marginLeft: "10px", fontSize: "23px" }}>SignUp</button>
+                                    <button className="btn btn-outline-success btn-sm" type="button" style={{ marginLeft: "10px", fontSize: "23px" }}>SignUp</button>
 
                                 </NavLink>
                             }
