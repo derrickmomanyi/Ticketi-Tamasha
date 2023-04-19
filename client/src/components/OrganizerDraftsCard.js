@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { NavLink} from 'react-router-dom'
 
@@ -75,11 +76,11 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 =======
 
 >>>>>>> f22b60d (Changes)
+=======
+>>>>>>> 6330be7 (Solved error)
 import React from "react";
-import { NavLink} from 'react-router-dom'
-import { useNavigate} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
-import EditDraft from "./EditDraft";
+
 
 function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
     const navigate = useNavigate();
