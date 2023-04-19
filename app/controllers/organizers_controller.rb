@@ -19,9 +19,9 @@ class OrganizersController < ApplicationController
           organizer = Organizer.create!(organizer_params)
           session[:user_id] = organizer.id
           session[:is_organizer] = 1
-          # if organizer.save
-          #   UserMailer.welcome_email(organizer).deliver_now
-          # end
+          if organizer.save
+            UserMailer.welcome_email(organizer).deliver_now
+          end
           render json: organizer, status: :created
         end
     end
