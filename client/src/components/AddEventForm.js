@@ -182,10 +182,13 @@ export default AddEventForm;
 =======
 import React, { useState, useContext } from "react";
 import { UserContext } from "../context/user";
+import { useNavigate } from 'react-router-dom';
 
 function AddEventForm({ onAddDrafts }) {
   const { user } = useContext(UserContext);
   const [title, setTitle] = useState("");
+  const navigate = useNavigate();
+
 
   const [image, setImage] = useState("")
   const [category, setCategory] = useState("")
@@ -224,24 +227,25 @@ function AddEventForm({ onAddDrafts }) {
       method: "POST",
       body: formData
     })
-      .then(res => res.json())
-      .then(drafts => {
-        onAddDrafts(drafts)
-        setTitle('')
-        setImage('')
-        setCategory('')
-        setDescription('')
-        setHostedBy('')
-        setFeaturing('')
-        setDressCode('')
-        setLocation('')
-        setDate('')
-        setTime('')
-        setTickets('')
-        setPrice('')
-      })
-
-
+    .then(res => res.json())
+    .then(drafts => {
+      onAddDrafts(drafts)
+      setTitle('')
+      setImage('')
+      setCategory('')
+      setDescription('')
+      setHostedBy('')
+      setFeaturing('')
+      setDressCode('')
+      setLocation('')
+      setDate('')
+      setTime('')
+      setTickets('')
+      setPrice('')
+      navigate(`/organizers/${user?.id}/drafts`)
+    })
+   
+    
   };
 
   return (
