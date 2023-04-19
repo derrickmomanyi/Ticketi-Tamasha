@@ -1,100 +1,81 @@
-# README
+# **TICKETI TAMASHA** 
+----
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an e-ticketing app that allows a user to view all current and upcoming events that have been posted by our various organizers. The app allows a user to like an event in which it is added to the favourites where they can view it later. The user is also able to buy ticket(s) to the any event of their choosing via M-Pesa.
 
-Things you may want to cover:
+----
 
-* Ruby version
+## Demo
+![Demo](/public/images/Tikiti%20Tamasha%20-%20Google%20Chrome%202023-04-19%2016-26-37.gif)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-<!-- # Ticketi Tamasha
-
-Ticketi Tamasha  event ticketing system is an online platform that allows users to browse, purchase and manage tickets for various events such as concerts, conferences, sports games, festivals, and more. The system provides a centralized place for event organizers to sell tickets and for customers to purchase them, eliminating the need for physical ticket sales and paper tickets;
-
-*User registration and account management: Users can create an account, edit their profile, and manage their ticket orders.
-
-*Event listing and management: Event organizers can list and manage their events, including details such as date, time, venue, pricing, seating options, and availability of tickets.
-
-*Ticket purchasing: Customers can browse and purchase tickets for events, choose their seats, and make payments through the platform. The system should support multiple payment options such as credit card, debit card, PayPal, and other popular payment gateways.
-
-*Ticket delivery: After a successful purchase, customers receive electronic tickets via email or mobile app that they can use to gain entry to the event -->
+## Technologies used
+  * Javascript
+  * React
+  * Bootsrap
+  * Google Fonts
+  * Custom API Server -Ruby on Rails
+  * Active Record: :storage
 
 
+----
 
-<!-- ## Setup
+## Set up and intructions
+### Set Up
+This app consists of a React frontend and and a Rails backend as the API. 
+To ensure that the app works as intended ensure that your machine meets the following requirement
 
-*Clone the repository 
-```
-$ git clone git@https://github.com/derrickmomanyi/Ticketi-Tamasha.git
-```
+  * The ruby version should be 2.7.4
+  * You have PostgressSQL installed as that is the database used in the project
+  * The version of rails installed should be Rails 7.0.4.3 or higher
 
-*Install the necessary gems
-```
-bundle install
-```
-*Create the PostgreSQL database:
-```
-rails db:create 
-```
-*Migrate the database
-```
-rails db:migrate seed
-```
-## Usage
 
-To run the Rails application,Start the server:
-```
-rails s
-```
+### Instructions
+ 1. Clone this project from Github to your local machine
+ 2. Open the project in your code editor of choice and run the following commands through the terminal:
+     
+       
+        bundle install
+        
+        rails db:seed
+       
+        rails s
+        
+3. Open another terminal, don't close the previous terminal and run the following commands:
+       
+        cd client
+       
+        npm install
+       
+        npm start
+       
+4. This will start the application and ready to use in your browser.
 
-Then, navigate to http://localhost:3000 in your web browser to view the application. -->
+----
+## Features
+ A user has the ability to:
+  * Login to the app as an user
+  * View all available events
+  * Search for an event by name or category
+  * Add an event to their favorites
+  * Purchase a ticket via M-pesa
+  * Remove an event from their favourites
+  * Logout of the app
 
-<!-- ## Configuration
-```
-production:
-  <<: *default
-  database: ticketitamasha_production
-  username: ticketitamasha
-  password: <%= ENV["TICKETITAMASHA_DATABASE_PASSWORD"] %>
-```
+As an organizer, I have the ability to:
+  * Login as an organizer
+  * View all available events created by me, as the organizer, and all events by other organizers
+  * Search for an event by name or category
+  * Purchase a ticket via M-pesa
+  * Create a draft event, that will be saved in the drafts section pending review to be added to all    events
+  * Logout of the app
 
-## Deployment
+---
+# Authors
+ Derrick Momanyi
+ Happiness James
+ Ian Gathui
+ Dennis Mugambi
+ Jesse Wambu
 
-To deploy the application to a production server, you will need to set the RAILS_ENV environment variable to production and configure the database accordingly.
 
-It is recommended that you use a tool such as render to automate the deployment process and ensure consistent environments across different servers. -->
-
-<!-- ## Contributing
-
-If you would like to contribute to the project, please open a pull request with your changes -->
-
-<!-- 
-formData.append("draft[title]", title);        
-        formData.append("draft[category]", category);
-        formData.append("draft[hosted_by]", hostedBy);
-        formData.append("draft[featuring]", featuring);
-        formData.append("draft[dress_code]", dressCode);
-        formData.append("draft[location]", location);
-        formData.append("draft[date]", date);
-        formData.append("draft[time]", time);
-        formData.append("draft[tickets]", tickets);
-        formData.append("draft[price]", price);
-        formData.append("draft[description]", description);
-        formData.append("draft[image]", image);
-        formData.append('draft[organizer_id]', user?.id) -->
+ # License
