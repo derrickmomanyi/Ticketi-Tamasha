@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, {useState} from "react";
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
@@ -97,6 +98,8 @@ function EventCard({ event, user }) {
 }
 export default EventCard;
 =======
+=======
+>>>>>>> 770514e (icons styling)
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import '../css/EventCard.css';
