@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { NavLink} from 'react-router-dom'
 
@@ -82,11 +83,24 @@ import React from "react";
 <<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 
+=======
+
+import React from "react";
+import { NavLink} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import EditDraft from "./EditDraft";
+>>>>>>> 3e6f033 (solving conflicts)
 
 function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
     const navigate = useNavigate();
      
+     
+    const dates = new Date(draft.date);
+    const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0,3) // "WED"
+    const day = dates.toLocaleString("default", { day: "numeric" })// "15"
+    const monthInWords = dates.toLocaleString("default", { month: "long" }).slice(0,3) // "APR"
 
+<<<<<<< HEAD
   const dates = new Date(draft.date);
   const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0, 3) // "WED"
   const day = dates.toLocaleString("default", { day: "numeric" })// "15"
@@ -108,21 +122,28 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
   const dayInWords = dates.toLocaleString("default", { weekday: "long" }).slice(0, 3) // "WED"
   const day = dates.toLocaleString("default", { day: "numeric" })// "15"
   const monthInWords = dates.toLocaleString("default", { month: "long" }).slice(0, 3) // "APR"
+=======
+    function getOrdinalSuffix(day) {
+        const j = day % 10, k = day % 100;
+        if (j === 1 && k !== 11) {
+          return "st";
+        }
+        if (j === 2 && k !== 12) {
+          return "nd";
+        }
+        if (j === 3 && k !== 13) {
+          return "rd";
+        }
+        return "th";
+      }
+>>>>>>> 3e6f033 (solving conflicts)
 
-  function getOrdinalSuffix(day) {
-    const j = day % 10, k = day % 100;
-    if (j === 1 && k !== 11) {
-      return "st";
-    }
-    if (j === 2 && k !== 12) {
-      return "nd";
-    }
-    if (j === 3 && k !== 13) {
-      return "rd";
-    }
-    return "th";
-  }
+      function truncate(str, n) {
+        return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+        
+      }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
       function handleRedirect(){
         navigate('/editdraft')
@@ -152,18 +173,22 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 =======
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
+=======
+      function handleDeleteDraft(){
+        fetch(`/drafts/${draftId}`, {
+          method:'DELETE'
+        })
+        onDeleteDraft(draftId)            
+      }
+>>>>>>> 3e6f033 (solving conflicts)
 
-  }
+      function handleRedirect(){
+        navigate('/editdraft')
+      }
 
-  function handleDeleteDraft() {
-    fetch(`/drafts/${draftId}`, {
-      method: 'DELETE'
-    })
-    onDeleteDraft(draftId)
-  }
 
-  return (
-    <>
+    return(
+        <>
       <div className="card " style={{ width: '18rem' }}>
         <NavLink to={`/drafts/${draft.id}`}>
           <img src={draft.image_url} className="card-img-top" alt={draft.title} />
@@ -196,16 +221,22 @@ function OrganizerDraftsCard( {draft, draftId, onDeleteDraft} ){
 
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3e6f033 (solving conflicts)
         
         
         </>
     )
+<<<<<<< HEAD
 =======
 
 
     </>
   )
 >>>>>>> 770514e (icons styling)
+=======
+>>>>>>> 3e6f033 (solving conflicts)
 }
 >>>>>>> f53e410 (Added redirect icon to edit)
 export default OrganizerDraftsCard;
