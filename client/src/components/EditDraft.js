@@ -42,7 +42,7 @@ function EditDraft() {
     const [time, setTime] = useState('')
     const [tickets, setTickets] = useState('')
     const [price, setPrice] = useState('')
- 
+    const [image, setImage] = useState("")
 
 
     useEffect(() => {
@@ -74,7 +74,8 @@ function EditDraft() {
         formData.append("time", time);
         formData.append("tickets", tickets);
         formData.append("price", price);
-        formData.append("description", description);       
+        formData.append("description", description);
+        formData.append("image", image);
         formData.append('organizer_id', user?.id)
 
 
@@ -106,7 +107,14 @@ function EditDraft() {
                                 onChange={(e) => setTitle(e.target.value)}
                                 required />
                             <br />
-                           
+                            <label>Title</label>
+                            <input className="form-control form-control-lg"
+                                type="file"
+                                name='image'
+                                placeholder="Image"
+                                onChange={(e) => setImage(e.target.files[0])}
+                                required />
+                            <br />
                             <label>Category</label>
                             <select value={category} onChange={(e) => setCategory(e.target.value)} className="form-control form-control-lg" name='category'>
                                 <option value="">Choose a category</option>
@@ -201,6 +209,7 @@ function EditDraft() {
                             <br />
 
                             <button className="btn login btn-primary btn-lg" type="submit">Update Event</button>
+                            {/* <button className="btn login btn-primary btn-lg" type="submit">Approve Event</button> */}
                         </div>
                     </div>
                 </div>
