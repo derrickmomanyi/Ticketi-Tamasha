@@ -32,6 +32,8 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
   config.require_master_key = true 
+  config.read_encrypted_secrets = true
+  config.secret_key_base = 'eb6a321a8240c2e2dff8b2ac017dad7405bbc6921b998ff4eb81f22f4bde0a55883cf1162b480fb1a16abdf94645c23796fb0d703d61419e8b995dd08478499e'
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
