@@ -107,7 +107,7 @@ function EditDraft() {
                                 onChange={(e) => setTitle(e.target.value)}
                                 required />
                             <br />
-                            <label>Title</label>
+                            <label>Image</label>
                             <input className="form-control form-control-lg"
                                 type="file"
                                 name='image'
