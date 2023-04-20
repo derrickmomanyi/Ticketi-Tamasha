@@ -25,7 +25,7 @@ function EditDraft() {
     })
 
     useEffect(() => {
-        fetch(`/drafts/${id}`)
+        fetch(`/events/${id}`)
             .then((res) => res.json())
             .then((data) => setDraft(data))
 

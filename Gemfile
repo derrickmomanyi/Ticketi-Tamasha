@@ -72,6 +72,8 @@ group :test do
   gem "webdrivers"
 end
 
+gem 'ruby-vips', '~> 2.0', '>= 2.0.7'
+
 
 
 gem 'rack-cors'
@@ -80,4 +82,10 @@ gem "active_model_serializers", "~> 0.10.13"
 gem "aws-sdk-s3", "~> 1.121"
 
 gem 'kaminari'
+
+
+gem "net-http"
+gem "net-smtp"
+gem "net-imap"
+gem "uri", "0.10.0"
 

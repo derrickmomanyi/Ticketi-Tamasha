@@ -4,7 +4,7 @@ import '../css/EventCard.css';
 
 function EventCard({ event, user }) {
 
-  const { id, image, title, date, location } = event
+  const { id, image_url, title, date, location } = event
   const [liked, setLiked] = useState(false)
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -64,7 +64,7 @@ function EventCard({ event, user }) {
 
       <div className="card " style={{ width: '18rem' }}>
         <NavLink to={`/events/${event.id}`}>
-          <img src={image} className="card-img-top" alt={title} />
+          <img src={image_url} className="card-img-top" alt={title} />
         </NavLink>
         <div className="card-body">
           <div className="title-like">
