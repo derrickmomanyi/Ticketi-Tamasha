@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+class UserMailer < ApplicationMailer
+    def welcome_email(user)
+        @user = user
+        mail(to: @user.email, subject: 'Welcome to Tikiti Tamasha')
+    end
+end
+=======
 class UserMailer < ApplicationMailer
 
   def welcome_email(user)
@@ -5,3 +13,4 @@ class UserMailer < ApplicationMailer
     mail(to: @user.email, subject: 'Welcome to Tikiti Tamasha')
 end
 end
+>>>>>>> origin/buffer
