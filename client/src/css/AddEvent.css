@@ -1,9 +1,9 @@
 .card-addevent {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     transition: 0.3s;
-    width: 30%;
+    width: 73%;
     padding: 30px 16px;
-    margin: 5% 35%;
+    margin: 5% 14%;
 }
 
 .card-addevent:hover {
@@ -14,3 +14,13 @@
     text-align: center;
     color: #008080;
 }
+.create-2{
+    margin-left: 10%;
+}
+.create-style{
+    display: flex;
+    padding-top: 2%;
+    margin-left: 10%;
+
+}
+

@@ -19,9 +19,9 @@ class CustomersController < ApplicationController
           customer = Customer.create!(customer_params)
           session[:user_id] = customer.id
           session[:is_organizer] = 0
-          # if customer.save
-          #   UserMailer.welcome_email(customer).deliver_now
-          # end
+          if customer.save
+            UserMailer.welcome_email(customer).deliver_now
+          end
           render json: customer, status: :created
         end
     end

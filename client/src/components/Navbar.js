@@ -37,7 +37,17 @@ function Navbar() {
                     // style={{ paddingLeft: "20%" }}
                     >
                         <li className="nav-item home-icon" >
-                            <NavLink to="/"><svg xmlns="http://www.w3.org/2000/svg"
+                            <NavLink to="/"
+                                style={({ isActive }) =>
+                                    isActive
+                                        ? {
+                                            color: '#008080',
+                                            textDecoration: 'underline'
+                                        }
+                                        : { color: '#008080', textDecoration: 'none' }
+                                }
+                            >HOME
+                                {/* <svg xmlns="http://www.w3.org/2000/svg"
                                 width="46"
                                 height="56"
                                 fill="#008080"
@@ -45,7 +55,7 @@ function Navbar() {
                                 viewBox="0 0 16 16">
                                 <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
                                 <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
-                            </svg>
+                            </svg> */}
                             </NavLink>
                         </li>
 
@@ -59,51 +69,51 @@ function Navbar() {
                                         }
                                         : { color: '#008080', textDecoration: 'none' }
                                 }
-                            >Favourites</NavLink>
+                            >FAVOURITES</NavLink>
                         </li> : null}
 
 
                         <div className="organizer-links">
-                        {user?.admin ? <li className="nav-item event-org">
-                            <NavLink to={`/organizers/${user.id}/drafts`}
-                                style={({ isActive }) =>
-                                    isActive
-                                        ? {
-                                            color: '#008080',
-                                            textDecoration: 'underline'
-                                        }
-                                        : { color: '#008080', textDecoration: 'none' }
-                                }
-                            >Drafts</NavLink>
+                            {user?.admin ? <li className="nav-item event-org">
+                                <NavLink to={`/organizers/${user.id}/drafts`}
+                                    style={({ isActive }) =>
+                                        isActive
+                                            ? {
+                                                color: '#008080',
+                                                textDecoration: 'underline'
+                                            }
+                                            : { color: '#008080', textDecoration: 'none' }
+                                    }
+                                >DRAFTS</NavLink>
 
-                        </li> : ''}
+                            </li> : ''}
 
-                        {user?.admin ? <li className="nav-item create">
-                            <NavLink to="/addevent"
-                                style={({ isActive }) =>
-                                    isActive
-                                        ? {
-                                            color: '#008080',
-                                            textDecoration: 'underline'
-                                        }
-                                        : { color: '#008080', textDecoration: 'none' }
-                                }
-                            >Create</NavLink>
-                        </li> : ''}
+                            {user?.admin ? <li className="nav-item create">
+                                <NavLink to="/addevent"
+                                    style={({ isActive }) =>
+                                        isActive
+                                            ? {
+                                                color: '#008080',
+                                                textDecoration: 'underline'
+                                            }
+                                            : { color: '#008080', textDecoration: 'none' }
+                                    }
+                                >CREATE</NavLink>
+                            </li> : ''}
                         </div>
 
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end" style={{ marginLeft: "700px", marginTop: "3px" }}>
 
 
-                            {user ? <NavLink to='/logout' onClick={handleClickLogout} ><button className="btn btn-outline-success" type="button" style={{ fontSize: "23px", marginLeft: "18px" }}>Logout</button></NavLink>
-                                : <NavLink to='/login'  ><button className="btn btn-outline-success me-md-2" type="button" style={{ fontSize: "23px" }}>Login</button></NavLink>
+                            {user ? <NavLink to='/logout' onClick={handleClickLogout} ><button className="btn btn-outline-success btn-sm" type="button" style={{ fontSize: "23px"}}>Logout</button></NavLink>
+                                : <NavLink to='/login'  ><button className="btn btn-outline-success btn-sm me-md-2" type="button" style={{ fontSize: "23px" }}>Login</button></NavLink>
 
                             }
 
                             {user ? null :
                                 <NavLink to='/signup'>
 
-                                    <button className="btn btn-outline-success" type="button" style={{ marginLeft: "10px", fontSize: "23px" }}>SignUp</button>
+                                    <button className="btn btn-outline-success btn-sm" type="button" style={{ marginLeft: "10px", fontSize: "23px" }}>SignUp</button>
 
                                 </NavLink>
                             }
