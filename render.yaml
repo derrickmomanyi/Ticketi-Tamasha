@@ -1,18 +1,18 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: tikiti-tamasha
+    databaseName: tikiti_tamasha
+    user: tikiti_tamasha_user
 
 services:
   - type: web
-    name: mysite
+    name: tamasha
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: tikiti_tamasha
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
