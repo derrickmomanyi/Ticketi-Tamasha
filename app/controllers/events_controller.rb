@@ -7,7 +7,7 @@ class EventsController < ApplicationController
     wrap_parameters format: []
 
     def index
-        render json: Event.all, status: :ok
+        render json: Event.page(params[:page]), status: :ok
     end
 
     def show
