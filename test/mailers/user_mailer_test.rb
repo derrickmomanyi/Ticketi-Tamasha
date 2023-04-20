@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+require "test_helper"
+
+class UserMailerTest < ActionMailer::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end
+=======
 require "test_helper"
 
 class UserMailerTest < ActionMailer::TestCase
@@ -10,3 +19,4 @@ class UserMailerTest < ActionMailer::TestCase
   end
 
 end
+>>>>>>> origin/buffer
