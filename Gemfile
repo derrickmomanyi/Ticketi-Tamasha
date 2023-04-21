@@ -89,3 +89,5 @@ gem "net-smtp"
 gem "net-imap"
 gem "uri", "0.10.0"
 
+gem 'rest-client'
+
