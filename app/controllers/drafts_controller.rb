@@ -15,10 +15,7 @@ class DraftsController < ApplicationController
     end
 
     def create
-        draft = Draft.create!(draft_params)
-        if draft.save
-            PostMailer.post_created(draft.title, draft.organizer.email, draft.organizer.username).deliver_now
-          end
+        draft = Draft.create!(draft_params)        
         render json: draft, status: :created
     end
 
