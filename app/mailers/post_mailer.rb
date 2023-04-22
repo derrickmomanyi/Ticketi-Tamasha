@@ -4,6 +4,6 @@ class PostMailer < ApplicationMailer
     @draft = draft
     @organizerEmail = organizerEmail
     @organizerName = organizerName    
-    mail(to: @organizerEmail, subject: "Your Event, #{@draft} Has Been Created Successfully")
+    mail(to: @organizerEmail, subject: "Your Event, #{@draft} Has Been Added to your drafts")
   end
 end
