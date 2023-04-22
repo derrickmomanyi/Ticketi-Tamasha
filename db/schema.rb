@@ -100,7 +100,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_22_105639) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "image"
-    t.bigint "organizer_id"
+    t.bigint "organizer_id", null: false
     t.index ["organizer_id"], name: "index_events_on_organizer_id"
   end
 
