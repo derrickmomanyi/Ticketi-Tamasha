@@ -18,6 +18,9 @@ class EventsController < ApplicationController
 
     def create
         event = Event.create!(event_params)
+        if event.save
+            EventMailer.event_created(event.title, event.organizer.email, event.organizer.username).deliver_now
+        end
         render json: event, status: :created
     end
 
