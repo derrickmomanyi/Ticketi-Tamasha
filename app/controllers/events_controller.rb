@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
     rescue_from ActiveRecord::RecordNotFound, with: :render_not_found_response
     rescue_from ActiveRecord::RecordInvalid, with: :render_unprocessable_entity_response   
-    skip_before_action :authorized_user, :admin_user, only: [:index, :show, :create, :destroy] #allows non admins to access index and show
+    skip_before_action :authorized_user, :admin_user, only: [:index, :show, :create, :destroy, :update] #allows non admins to access index and show
 
     wrap_parameters format: []
 
@@ -19,6 +19,12 @@ class EventsController < ApplicationController
     def create
         event = Event.create!(event_params)
         render json: event, status: :created
+    end
+
+    def update
+        event = find_event
+        event.update!(event_params)
+        render json: event, status: :ok
     end
 
     def destroy
