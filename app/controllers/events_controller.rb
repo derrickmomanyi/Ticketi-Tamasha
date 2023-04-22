@@ -34,7 +34,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-        params.permit(:title, :image, :category, :description, :hosted_by, :featuring, :dress_code, :location, :date, :time ,:tickets, :price)
+        params.permit(:title, :image, :category, :description, :hosted_by, :featuring, :dress_code, :location, :date, :time ,:tickets, :price, :organizer_id)
     end
 
     def render_not_found_response
