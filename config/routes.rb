@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :organizers
   resources :customers
   resources :customer_events
+  resources :purchased_events
   resources :organizer_events
   resources :events
   resources :drafts
