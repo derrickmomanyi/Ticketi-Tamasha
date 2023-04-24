@@ -1,3 +1,5 @@
 class PurchasedEventSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :event
+  has_one :event
+  has_one :customer 
 end
