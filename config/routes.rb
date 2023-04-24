@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :organizers
   resources :customers
-  resources :customer_events 
+  resources :customer_events
+  resources :bought_events 
   resources :organizer_events
   resources :events
   resources :drafts
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
   get '/customers/:id/events', to: 'customers#customer_favourites'
   get '/organizers/:id/events', to: 'organizers#my_events'
   get '/organizers/:id/drafts', to: 'organizers#organizer_drafts'
+  get 'customers/:id/bought', to: 'customers#bought_tickets'
   get '/customers', to: 'customers#index'
   get '/customers/:id', to: 'customers#show'
   get '/organizers/:id', to: 'organizers#show'
