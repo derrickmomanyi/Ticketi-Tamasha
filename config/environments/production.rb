@@ -1,6 +1,23 @@
 require "active_support/core_ext/integer/time"
+Rails.application.routes.default_url_options = {
+  host: 'https://tamasha.onrender.com'
+}
 
 Rails.application.configure do
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = {host: "https://tamasha.onrender.com", protocol: "https"}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'gmail.com',
+  user_name:            'TikitiTamasha@gmail.com',
+  password:             'kpnbtfscaqacbwwz',
+  authentication:       'plain',
+  enable_starttls_auto: true,
+  open_timeout:         5,
+  read_timeout:         5 
+   }
 
  
 
@@ -8,12 +25,15 @@ Rails.application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-
+  # config.hosts << "443c-102-219-208-174.ngrok-free.app"
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
+  config.require_master_key = true 
+  config.read_encrypted_secrets = true
+  config.secret_key_base = 'eb6a321a8240c2e2dff8b2ac017dad7405bbc6921b998ff4eb81f22f4bde0a55883cf1162b480fb1a16abdf94645c23796fb0d703d61419e8b995dd08478499e'
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
@@ -25,7 +45,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present? || ENV['RENDER'].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -41,7 +61,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = "X-Accel-Redirect" # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
-  config.active_storage.service = :local
+  config.active_storage.service = :amazon
 
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
@@ -69,7 +89,7 @@ Rails.application.configure do
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
-  # config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).

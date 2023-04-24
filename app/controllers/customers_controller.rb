@@ -1,6 +1,6 @@
 class CustomersController < ApplicationController
     skip_before_action :authorized_user, :admin_user
-    wrap_parameters format: []
+    # wrap_parameters format: []
 
 
     def index

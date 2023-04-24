@@ -1,8 +1,8 @@
 require "active_support/core_ext/integer/time"
 
-Rails.application.routes.default_url_options = {
-  host: 'http://localhost:3000'
-}
+# Rails.application.routes.default_url_options = {
+#   host: 'http://localhost:3000'
+# }
 
 Rails.application.configure do
 
@@ -46,6 +46,9 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
+
+  # config.hosts << /[a-z0-9]+\.ngrok\.io/
+  config.hosts << "443c-102-219-208-174.ngrok-free.app"
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.

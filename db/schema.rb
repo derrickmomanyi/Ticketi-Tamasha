@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_22_105639) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "access_tokens", force: :cascade do |t|
+    t.string "token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -81,7 +87,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
 
   create_table "events", force: :cascade do |t|
     t.string "title"
-    t.string "image"
     t.string "category"
     t.string "description"
     t.string "hosted_by"
@@ -92,6 +97,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
     t.time "time"
     t.integer "tickets"
     t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "image"
+    t.bigint "organizer_id", null: false
+    t.index ["organizer_id"], name: "index_events_on_organizer_id"
+  end
+
+  create_table "mpesas", force: :cascade do |t|
+    t.string "phoneNumber"
+    t.string "amount"
+    t.string "checkoutRequestID"
+    t.string "merchantRequestID"
+    t.string "mpesaReceiptNumber"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -124,6 +142,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_18_080128) do
   add_foreign_key "customer_events", "customers"
   add_foreign_key "customer_events", "events"
   add_foreign_key "drafts", "organizers"
+  add_foreign_key "events", "organizers"
   add_foreign_key "organizer_events", "events"
   add_foreign_key "organizer_events", "organizers"
 end
