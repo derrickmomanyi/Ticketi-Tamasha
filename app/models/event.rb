@@ -1,7 +1,7 @@
 
 class Event < ApplicationRecord
     validates :title, :image, :category, :description, :hosted_by, :featuring, :dress_code, :location, :date, :time ,:tickets, :price, presence: true
-    validates :title, uniqueness: true
+    
 
     paginates_per 60
     has_one_attached :image
