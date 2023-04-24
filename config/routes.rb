@@ -13,6 +13,9 @@ Rails.application.routes.draw do
   get 'customers/:id/purchased', to: 'customers#purchased_events'
   get '/organizers/:id/events', to: 'organizers#my_events'
   get '/organizers/:id/drafts', to: 'organizers#organizer_drafts'
+  get '/customers', to: 'customers#index'
+  get '/customers/:id', to: 'customers#show'
+  get '/organizers/:id', to: 'organizers#show'
   post 'stkpush', to: 'mpesas#stkpush'
   post 'stkquery', to: 'mpesas#stkquery'
 end
