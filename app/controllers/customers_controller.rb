@@ -37,7 +37,7 @@ class CustomersController < ApplicationController
       render json: customer.customer_events
     end
 
-    def purchased_events
+    def purchased_tickets
       customer = Customer.find(params[:id])
       render json: customer.purchased_events
     end
