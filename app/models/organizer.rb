@@ -4,4 +4,5 @@ class Organizer < ApplicationRecord
 
     has_many :organizer_events
     has_many :drafts
+    has_many :events
 end
