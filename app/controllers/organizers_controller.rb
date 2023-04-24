@@ -45,6 +45,11 @@ class OrganizersController < ApplicationController
       render json: organizer.drafts
     end
 
+    def my_events
+      organizer = Organizer.find(params[:id])
+      render json: organizer.events
+    end
+
     private
   
     def organizer_params

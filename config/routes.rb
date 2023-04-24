@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#delete'
   get '/me', to: 'organizers#show'
   get '/customers/:id/events', to: 'customers#customer_favourites'
+  get '/organizers/:id/events', to: 'organizers#my_events'
   get '/organizers/:id/drafts', to: 'organizers#organizer_drafts'
   post 'stkpush', to: 'mpesas#stkpush'
   post 'stkquery', to: 'mpesas#stkquery'
