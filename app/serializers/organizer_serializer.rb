@@ -3,3 +3,4 @@ class OrganizerSerializer < ActiveModel::Serializer
 
   has_many :drafts
 end
+
