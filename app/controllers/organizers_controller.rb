@@ -28,14 +28,14 @@ class OrganizersController < ApplicationController
 
     #if organizer wants to change username or password
     def update
-        organizer = Organizer.find(params[:id])
+        organizer = find_organizer
         organizer.update!(organizer_params)
         render json: organizer, status: :ok
     end
 
 
     def destroy
-        organizer = Organizer.find(params[:id])
+        organizer = find_organizer
         organizer.destroy
         head :no_content
     end
@@ -51,6 +51,10 @@ class OrganizersController < ApplicationController
     end
 
     private
+
+    def find_organizer
+      Organizer.find(params[:id])
+     end
   
     def organizer_params
       params.permit(:username, :email, :password, :password_confirmation)

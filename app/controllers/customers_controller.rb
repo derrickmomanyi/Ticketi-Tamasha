@@ -28,7 +28,7 @@ class CustomersController < ApplicationController
     end
 
     def update
-        customer = Customer.find(params[:id])
+        customer = find_customer
         customer.update!(customer_params)
         render json: customer, status: :ok
     end
@@ -43,7 +43,17 @@ class CustomersController < ApplicationController
       render json: customer.bought_events
     end
 
+    def destroy
+      customer = find_customer
+      customer.destroy
+      head :no_content
+  end
+
     private
+
+    def find_customer
+      Customer.find(params[:id])
+     end
 
     def customer_params
         params.permit(:username, :email, :password, :password_confirmation)
