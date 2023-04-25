@@ -48,7 +48,7 @@ Rails.application.configure do
   config.server_timing = true
 
   # config.hosts << /[a-z0-9]+\.ngrok\.io/
-  config.hosts << "443c-102-219-208-174.ngrok-free.app"
+  config.hosts << "5457-102-219-208-174.ngrok-free.app"
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
