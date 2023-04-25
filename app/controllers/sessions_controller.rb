@@ -9,12 +9,12 @@ class SessionsController < ApplicationController
         if customer&.authenticate(params[:password])
             session[:user_id] = customer.id
             session[:is_organizer] = 0
-            render json: customer, status: :ok
+            render json: customer.as_json(except: [:password_digest]), status: :ok
         
         elsif organizer&.authenticate(params[:password])
         session[:user_id] = organizer.id
         session[:is_organizer] = 1
-        render json: organizer, status: :ok   
+        render json: organizer.as_json(except: [:password_digest]), status: :ok  
            
             
         else
