@@ -34,11 +34,11 @@ class OrganizersController < ApplicationController
     end
 
 
-    def destroy
-        organizer = find_organizer
-        organizer.destroy
-        head :no_content
-    end
+    # def destroy
+    #     organizer = find_organizer
+    #     organizer.destroy
+    #     head :no_content
+    # end
 
     def organizer_drafts
       organizer = Organizer.find(params[:id])
