@@ -16,7 +16,7 @@ class BoughtEventsController < ApplicationController
     def create
         bought_event = BoughtEvent.create!(bought_event_params)
         if bought_event.save
-            PurchaseMailer.confirmation_message(bought_event.event.title, bought_event.customer.email, bought_event.customer.username, bought_event.early_bird, bought_event.advance, bought_event.vip, bought_event.amount, bought_event.event.dress_code, bought_event.time, bought_event.date).deliver_now
+            PurchaseMailer.confirmation_message(bought_event.event.title, bought_event.customer.email, bought_event.customer.username, bought_event.early_bird, bought_event.advance, bought_event.vip, bought_event.amount, bought_event.event.dress_code, bought_event.event.time, bought_event.event.date).deliver_now
         end
         render json: bought_event, status: :created
     end
