@@ -17,6 +17,6 @@ class PurchaseMailer < ApplicationMailer
     @eventTime = eventTime
     @eventDate = eventDate
 
-    mail(to: @customerEmail, subject: "Your payment for #{@event} of #{@eventAmount} shillings Has Been Received")
+    mail(to: @customerEmail, subject: "Your payment for #{@eventTitle} of #{@eventAmount} shillings Has Been Received")
   end
 end
