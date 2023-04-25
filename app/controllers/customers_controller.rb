@@ -4,7 +4,7 @@ class CustomersController < ApplicationController
 
 
     def index
-      customers = Customer.all.as_json(except: [:password_digest])
+      customers = Customer.all
       render json: customers, status: :ok
     end
 
