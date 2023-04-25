@@ -27,7 +27,7 @@ class BoughtEventsController < ApplicationController
     private
 
     def bought_event_params
-        params.permit(:customer_id, :event_id, :amount, :phone_number)
+        params.permit(:customer_id, :event_id, :amount, :phone_number, :early_bird, :advance, :vip)
     end
 
     def find_bought_event
