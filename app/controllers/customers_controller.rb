@@ -43,11 +43,11 @@ class CustomersController < ApplicationController
       render json: customer.bought_events
     end
 
-    def destroy
-      customer = find_customer
-      customer.destroy
-      head :no_content
-  end
+  #   def destroy
+  #     customer = find_customer
+  #     customer.destroy
+  #     head :no_content
+  # end
 
     private
 
